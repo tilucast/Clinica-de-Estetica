@@ -1,0 +1,15 @@
+.tratamentos{
+    padding: 6rem 0;
+    background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+    text-align: center;
+
+    grid-row: 3 / 4;
+    grid-column: full-start / full-end;
+    &__p{
+        font-size: 1.8rem;
+        color: var(--gray-1);
+        font-family: var(--font-heading);
+        margin-top: 3rem;
+        text-transform: uppercase;
+    }
+}

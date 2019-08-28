@@ -1,0 +1,60 @@
+:root{
+    --color-primary-light: rgb(138, 43, 226);
+    --color-primary: rgb(101, 8, 187);
+    --color-primary-dark: rgb(81, 4, 153);
+
+
+    --gray-1: rgb(241, 241, 241);
+    --gray-2: rgb(230, 230, 230);
+    --gray-3: rgb(218, 218, 218);
+
+    --gray-darker-1: rgb(134, 133, 133);
+    --gray-darker-2: rgb(99, 97, 97);
+    --gray-darker-3: rgb(61, 60, 60);
+
+    --font-primary: 'Source Sans Pro', sans-serif;
+    --font-heading: 'Nunito', sans-serif;
+    --font-heading-2: 'Josefin Sans', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+::after,
+::before{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem = 10px;
+}
+
+body{
+    font-family: var(--font-primary);
+    color: var(--gray-darker-2);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+//INDEX
+.container{
+    display: grid;
+    grid-template-rows: min-content 100vh min-content repeat(4, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) 
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]
+    minmax(6rem, 1fr) [full-end];
+}
+
+//TRATAMENTOS
+.container-2{
+    display: grid;
+    grid-template-rows: min-content 35vh;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) 
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]
+    minmax(6rem, 1fr) [full-end];
+}

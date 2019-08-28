@@ -1,0 +1,430 @@
+.btn {
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  border: none;
+  border-radius: 0;
+  background-color: var(--color-primary-dark);
+  color: var(--gray-1);
+  padding: 1.5rem 3rem;
+  transition: all .2s;
+  cursor: pointer;
+  box-shadow: 0rem 2rem 3.5rem rgba(0, 0, 0, 0.5); }
+  .btn:hover {
+    background-color: var(--color-primary-light);
+    transform: scale(1.02);
+    box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.4); }
+  .btn:focus {
+    transform: scale(1);
+    box-shadow: 0rem 2rem 3.5rem rgba(0, 0, 0, 0.5); }
+
+.btn-link {
+  grid-column: 2 / 3;
+  position: relative;
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--gray-2);
+  background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+  padding: 1.1rem 3rem;
+  margin-bottom: 3rem;
+  border-radius: 5rem;
+  display: inline-block;
+  justify-self: center;
+  align-self: center;
+  box-shadow: 0rem 1.3rem 1.3rem rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  z-index: 0;
+  transition: all .5s; }
+
+.btn-link::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0;
+  transition: all .5s;
+  background-image: linear-gradient(to left, var(--color-primary-dark), var(--color-primary-light));
+  border-radius: 5rem;
+  opacity: 0;
+  z-index: -1;
+  transition: all .3s; }
+
+.btn-link:hover::before {
+  opacity: 1;
+  transform: scale(1.04);
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 5rem; }
+
+.heading-1 {
+  font-size: 8rem;
+  font-family: var(--font-heading-2);
+  text-transform: uppercase;
+  color: var(--gray-3);
+  font-weight: 600;
+  line-height: 1; }
+
+.heading-2 {
+  font-size: 4rem;
+  letter-spacing: 9px;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--gray-3); }
+
+.heading-3 {
+  font-size: 3rem;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gray-3); }
+
+.heading-4 {
+  font-size: 2.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gray-1); }
+
+:root {
+  --color-primary-light: rgb(138, 43, 226);
+  --color-primary: rgb(101, 8, 187);
+  --color-primary-dark: rgb(81, 4, 153);
+  --gray-1: rgb(241, 241, 241);
+  --gray-2: rgb(230, 230, 230);
+  --gray-3: rgb(218, 218, 218);
+  --gray-darker-1: rgb(134, 133, 133);
+  --gray-darker-2: rgb(99, 97, 97);
+  --gray-darker-3: rgb(61, 60, 60);
+  --font-primary: 'Source Sans Pro', sans-serif;
+  --font-heading: 'Nunito', sans-serif;
+  --font-heading-2: 'Josefin Sans', sans-serif; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+::after,
+::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: var(--font-primary);
+  color: var(--gray-darker-2);
+  line-height: 1.6;
+  font-weight: 400; }
+
+.container {
+  display: grid;
+  grid-template-rows: min-content 100vh min-content repeat(4, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.container-2 {
+  display: grid;
+  grid-template-rows: min-content 35vh;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.header {
+  grid-row: 2 / 3;
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(rgba(138, 43, 226, 0.5), rgba(138, 43, 226, 0.5)), url(../img/wallhaven-731kdv.jpg);
+  background-size: cover;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr; }
+  .header__h1 {
+    align-self: end;
+    font-family: var(--font-primary);
+    margin-bottom: 2rem; }
+  .header__btn {
+    justify-self: center;
+    align-self: center; }
+
+.header-2 {
+  grid-row: 2 / 3;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: 1fr;
+  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/wallhaven-73wpro.jpg);
+  background-size: cover; }
+  .header-2__h2 {
+    align-self: center;
+    justify-self: center;
+    margin-top: 6rem;
+    font-weight: 600; }
+
+.navbar {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  grid-column: full-start / full-end;
+  z-index: 100; }
+  .navbar__img {
+    width: 80%; }
+
+.nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  height: 8vh;
+  align-items: center; }
+  .nav__link:link, .nav__link:visited {
+    text-decoration: none;
+    color: var(--gray-darker-3);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    padding: 1rem;
+    transition: all .2s; }
+  .nav__svg:hover, .nav__link:hover, .nav__link:active {
+    color: var(--color-primary-dark);
+    fill: var(--color-primary-dark); }
+  .nav__svg {
+    width: 2rem;
+    height: 2rem;
+    transform: translateY(0.3rem); }
+
+.footer {
+  padding: 3rem;
+  border-top: 1px solid var(--color-primary);
+  grid-row: 8 / 9;
+  grid-column: full-start / full-end;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .footer__copyright p {
+    font-size: 1.8rem;
+    color: var(--gray-3); }
+  .footer__links svg {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: 2rem;
+    transition: all .2s;
+    fill: black; }
+    .footer__links svg:hover {
+      fill: var(--gray-3); }
+
+.feature__img--1::before, .feature__img--2::before, .feature__img--3::before, .feature__img--4::before, .feature__img--5::before, .feature__img--6::before, .feature__img--7::before, .feature__img--8::before, .feature__img--9::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0;
+  transition: all .5s; }
+
+.feature__img--1, .feature__img--2, .feature__img--3, .feature__img--4, .feature__img--5, .feature__img--6, .feature__img--7, .feature__img--8, .feature__img--9 {
+  background-size: cover;
+  grid-row: 1 / 4;
+  grid-column: 1 / 3;
+  transition: all .3s;
+  position: relative;
+  z-index: 1; }
+
+.feature__img--1:hover::before, .feature__img--2:hover::before, .feature__img--3:hover::before, .feature__img--4:hover::before, .feature__img--5:hover::before, .feature__img--6:hover::before, .feature__img--7:hover::before, .feature__img--8:hover::before, .feature__img--9:hover::before {
+  opacity: 1;
+  outline: 3px solid white;
+  outline-offset: -30px; }
+
+.features {
+  margin: 12rem 0;
+  border-radius: .5rem;
+  background-color: var(--gray-1);
+  grid-row: 4 / 5;
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 4rem; }
+
+.feature {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  transition: all .2s; }
+  .feature__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    grid-row: 1 / 4;
+    grid-column: 1 / 3;
+    border-radius: .5rem;
+    overflow: hidden; }
+  .feature__img--1 {
+    height: 26rem;
+    background-image: url(../img/depilacao_a_laser.jpg); }
+  .feature__img--1::before {
+    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/depilacao_a_laser.jpg); }
+  .feature__img--2 {
+    height: 26rem;
+    background-image: url(../img/Carboxiterapia-620x330.jpg); }
+  .feature__img--2::before {
+    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/Carboxiterapia-620x330.jpg); }
+  .feature__img--3 {
+    height: 26rem;
+    background-image: url(../img/corrente-russa-620x330.jpg); }
+  .feature__img--3::before {
+    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/corrente-russa-620x330.jpg); }
+  .feature__img--4 {
+    height: 26rem;
+    background-image: url(../img/criolipolise.jpeg); }
+  .feature__img--4::before {
+    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/criolipolise.jpeg); }
+  .feature__img--5 {
+    height: 26rem;
+    background-image: url(../img/serv_est_drenagemLinfatica.jpg); }
+  .feature__img--5::before {
+    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/serv_est_drenagemLinfatica.jpg); }
+  .feature__img--6 {
+    height: 26rem;
+    background-image: url(../img/massagem-express.jpg); }
+  .feature__img--6::before {
+    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/massagem-express.jpg); }
+  .feature__img--7 {
+    height: 26rem;
+    background-image: url(../img/preenchimento.jpg); }
+  .feature__img--7::before {
+    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/preenchimento.jpg); }
+  .feature__img--8 {
+    height: 26rem;
+    background-image: url(../img/heccus.jpg); }
+  .feature__img--8::before {
+    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/heccus.jpg); }
+  .feature__img--9 {
+    height: 26rem;
+    background-image: url(../img/microagulhamento.jpg); }
+  .feature__img--9::before {
+    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/microagulhamento.jpg); }
+  .feature__caption {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    font-size: 2.4rem;
+    color: var(--gray-1);
+    font-family: var(--font-primary);
+    margin-bottom: 3rem;
+    text-align: center;
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: all .3s;
+    font-weight: 600;
+    z-index: 10; }
+  .feature:hover .feature__caption {
+    transform: translate(0, -70px);
+    opacity: 1; }
+
+.gallery {
+  grid-row: 5 / 6;
+  grid-column: full-start / full-end;
+  background-color: var(--gray-1);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 5vw);
+  grid-gap: 1.5rem;
+  padding: 2rem; }
+  .gallery__item--1 {
+    grid-row: 1 / 3;
+    grid-column: 1 / 4; }
+  .gallery__item--2 {
+    grid-row: 3/ 6;
+    grid-column: 1 / 3; }
+  .gallery__item--3 {
+    grid-row: 1 / 3;
+    grid-column: 6 / 7; }
+  .gallery__item--4 {
+    grid-row: 6 / 8;
+    grid-column: 1 / 3; }
+  .gallery__item--5 {
+    grid-row: 1 / 3;
+    grid-column: 4 / 6; }
+  .gallery__item--6 {
+    grid-row: 5 / 8;
+    grid-column: 7 / 9; }
+  .gallery__item--7 {
+    grid-row: 3 / 8;
+    grid-column: 5 / 7; }
+  .gallery__item--8 {
+    grid-row: 1 / 5;
+    grid-column: 7 / 9; }
+  .gallery__item--9 {
+    grid-row: 3 / 8;
+    grid-column: 3 / span 2; }
+  .gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background-position: center; }
+
+.tratamentos {
+  padding: 6rem 0;
+  background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+  text-align: center;
+  grid-row: 3 / 4;
+  grid-column: full-start / full-end; }
+  .tratamentos__p {
+    font-size: 1.8rem;
+    color: var(--gray-1);
+    font-family: var(--font-heading);
+    margin-top: 3rem;
+    text-transform: uppercase; }
+
+.map {
+  grid-row: 7 / 8;
+  grid-column: full-start / full-end;
+  padding: 5rem 0;
+  text-align: center;
+  margin-top: 6.5rem; }
+  .map__heading-2 {
+    margin-bottom: 5rem;
+    color: var(--gray-darker-3); }
+
+.services {
+  grid-row: 3 / 4;
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-row-gap: 3rem;
+  margin: 6rem 0; }
+  .services__servicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem; }
+  .services__img {
+    grid-column: 1 / 2;
+    border: 1px solid white;
+    height: 30rem;
+    width: 35rem;
+    justify-self: end;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+  .services__text {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    padding: 3rem;
+    width: 50vw;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+    .services__text--heading {
+      color: black;
+      font-family: var(--font-primary);
+      font-weight: 400; }
+    .services__text--pg {
+      font-size: 1.9rem; }
+  .services__btn {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    align-self: end;
+    justify-self: start;
+    margin-left: 3rem; }

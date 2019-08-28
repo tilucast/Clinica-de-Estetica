@@ -1,0 +1,13 @@
+.map{
+    grid-row: 7 / 8;
+    grid-column: full-start / full-end;
+
+    padding: 5rem 0;
+    text-align: center;
+    margin-top: 6.5rem;
+
+    &__heading-2{
+        margin-bottom: 5rem;
+        color: var(--gray-darker-3);
+    }
+}
