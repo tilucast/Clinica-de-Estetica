@@ -1,3 +1,4 @@
 /node_modules
 /gitcheatsheet.txt
-/id_rsa.pub
+node_modules
+id_rsa.pub
