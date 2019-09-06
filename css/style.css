@@ -265,6 +265,20 @@ body {
     grid-column: 1 / 3;
     border-radius: .5rem;
     overflow: hidden; }
+    .feature__img--caption {
+      font-size: 2.4rem;
+      color: var(--gray-1);
+      font-family: var(--font-primary);
+      margin-bottom: 3rem;
+      text-align: center;
+      opacity: 0;
+      backface-visibility: hidden;
+      transition: all .3s;
+      font-weight: 600;
+      z-index: 10; }
+    .feature__img:hover .feature__img--caption {
+      transform: translate(0, 100px);
+      opacity: 1; }
   .feature__img--1 {
     height: 26rem;
     background-image: url(../img/depilacao_a_laser.jpg); }
@@ -310,22 +324,6 @@ body {
     background-image: url(../img/microagulhamento.jpg); }
   .feature__img--9::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/microagulhamento.jpg); }
-  .feature__caption {
-    grid-column: 1 / 4;
-    grid-row: 3 / 4;
-    font-size: 2.4rem;
-    color: var(--gray-1);
-    font-family: var(--font-primary);
-    margin-bottom: 3rem;
-    text-align: center;
-    opacity: 0;
-    backface-visibility: hidden;
-    transition: all .3s;
-    font-weight: 600;
-    z-index: 10; }
-  .feature:hover .feature__caption {
-    transform: translate(0, -70px);
-    opacity: 1; }
 
 .gallery {
   grid-row: 5 / 6;
