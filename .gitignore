@@ -2,3 +2,4 @@ node_modules
 *.txt
 id_rsa.pub
 icomoon.zip
+/css/style.prefix.css
