@@ -21,7 +21,6 @@
     }
 
     &__btn{
-        //margin-top: 2rem;
         justify-self: center;
         align-self: center;
     }
@@ -46,4 +45,24 @@
     margin-top: 6rem;
     font-weight: 600;
     }
+}
+
+.header-3{
+    grid-row: 2/3;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-rows: 1fr;
+
+    background-image: linear-gradient(rgba(blueviolet, .7), rgba(blueviolet, .7)),
+    url(../img/depilacao_a_laser.jpg);
+    background-size: cover;
+
+    &__h2{
+        align-self: center;
+        justify-self: center;
+    
+        margin-top: 6rem;
+        font-weight: 600;
+        }
 }

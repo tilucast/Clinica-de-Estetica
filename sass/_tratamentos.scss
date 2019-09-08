@@ -12,4 +12,40 @@
         margin-top: 3rem;
         text-transform: uppercase;
     }
+
+}
+
+.depilacao{
+    grid-row: 3 / 4;
+    grid-column: center-start / center-end;
+
+    margin: 9rem 0;
+
+    &__description{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 2rem;
+        align-items: center;
+        
+    }
+
+    &__description--text{
+        box-shadow: .5rem .5rem 1rem rgba(black, .1);
+        padding: 2rem 5rem;
+        margin: 3rem 0;
+
+        grid-column: 2 / 3;
+    }
+
+    &__img{
+        width: 35rem;
+        margin: 0 auto;    
+    }
+
+    &__btn{
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+
+        align-self: start;
+    }
 }

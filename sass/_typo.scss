@@ -21,7 +21,7 @@
     font-family: var(--font-heading);
     text-transform: uppercase;
     font-weight: 600;
-    color: var(--gray-3);
+    color: var(--color-primary);
 }
 
 .heading-4{
@@ -30,4 +30,18 @@
     text-transform: uppercase;
     font-weight: 600;
     color: var(--gray-1);
+}
+
+.paragraph{
+    font-size: 1.9rem;
+}
+
+.list{
+
+    margin: 1rem 0;
+
+    &__item{
+        font-size: 1.7rem;
+        
+    }
 }
