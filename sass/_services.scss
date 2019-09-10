@@ -8,10 +8,7 @@
     margin: 12rem 0;
 
     &__servicos{
-        
-
         display: grid;
-
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
     }

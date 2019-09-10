@@ -2,9 +2,6 @@
     grid-row: 2 / 3;
     grid-column: full-start / full-end;
 
-    //background-color: var(--color-primary);
-    //background-image: linear-gradient(rgba(var(--color-primary-dark), .93),
-    //rgba(var(--color-primary-dark), .93)), url(../img/wallhaven-731kdv.jpg);
 
     background-image: linear-gradient(rgba(blueviolet, .5), rgba(blueviolet, .5)),
     url(../img/wallhaven-731kdv.jpg);
@@ -26,7 +23,6 @@
     }
 }
 
-//TRATAMENTOS
 .header-2{
     grid-row: 2 / 3;
     grid-column: full-start / full-end;
@@ -65,4 +61,21 @@
         margin-top: 6rem;
         font-weight: 600;
         }
+}
+
+.heading{
+    padding: 6rem 0;
+    background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+    text-align: center;
+
+    grid-row: 3 / 4;
+    grid-column: full-start / full-end;
+    &__p{
+        font-size: 1.8rem;
+        color: var(--gray-1);
+        font-family: var(--font-heading);
+        margin-top: 3rem;
+        text-transform: uppercase;
+    }
+
 }

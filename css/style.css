@@ -18,7 +18,6 @@
     box-shadow: 0rem 2rem 3.5rem rgba(0, 0, 0, 0.5); }
 
 .btn-link {
-  grid-column: 2 / 3;
   position: relative;
   text-decoration: none;
   font-size: 2rem;
@@ -26,7 +25,6 @@
   color: var(--gray-2);
   background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
   padding: 1.1rem 3rem;
-  margin-bottom: 3rem;
   border-radius: 5rem;
   display: inline-block;
   justify-self: center;
@@ -131,7 +129,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: min-content 100vh min-content repeat(4, min-content);
+  grid-template-rows: min-content 100vh;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .container-2 {
@@ -185,6 +183,19 @@ body {
     justify-self: center;
     margin-top: 6rem;
     font-weight: 600; }
+
+.heading {
+  padding: 6rem 0;
+  background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+  text-align: center;
+  grid-row: 3 / 4;
+  grid-column: full-start / full-end; }
+  .heading__p {
+    font-size: 1.8rem;
+    color: var(--gray-1);
+    font-family: var(--font-heading);
+    margin-top: 3rem;
+    text-transform: uppercase; }
 
 .navbar {
   background-color: white;
@@ -254,8 +265,6 @@ body {
 
 .feature__img--1, .feature__img--2, .feature__img--3, .feature__img--4, .feature__img--5, .feature__img--6, .feature__img--7, .feature__img--8, .feature__img--9 {
   background-size: cover;
-  grid-row: 1 / 4;
-  grid-column: 1 / 3;
   transition: all .3s;
   position: relative;
   z-index: 1; }
@@ -273,20 +282,15 @@ body {
   grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-auto-rows: 1fr;
   grid-gap: 4rem; }
 
 .feature {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   transition: all .2s; }
   .feature__img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-    grid-row: 1 / 4;
-    grid-column: 1 / 3;
     border-radius: .5rem;
     overflow: hidden; }
     .feature__img--caption {
@@ -309,42 +313,34 @@ body {
   .feature__img--1::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/depilacao_a_laser.jpg); }
   .feature__img--2 {
-    height: 26rem;
     background-image: url(../img/Carboxiterapia-620x330.jpg); }
   .feature__img--2::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/Carboxiterapia-620x330.jpg); }
   .feature__img--3 {
-    height: 26rem;
     background-image: url(../img/corrente-russa-620x330.jpg); }
   .feature__img--3::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/corrente-russa-620x330.jpg); }
   .feature__img--4 {
-    height: 26rem;
     background-image: url(../img/criolipolise.jpeg); }
   .feature__img--4::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/criolipolise.jpeg); }
   .feature__img--5 {
-    height: 26rem;
     background-image: url(../img/serv_est_drenagemLinfatica.jpg); }
   .feature__img--5::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/serv_est_drenagemLinfatica.jpg); }
   .feature__img--6 {
-    height: 26rem;
     background-image: url(../img/massagem-express.jpg); }
   .feature__img--6::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/massagem-express.jpg); }
   .feature__img--7 {
-    height: 26rem;
     background-image: url(../img/preenchimento.jpg); }
   .feature__img--7::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/preenchimento.jpg); }
   .feature__img--8 {
-    height: 26rem;
     background-image: url(../img/heccus.jpg); }
   .feature__img--8::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/heccus.jpg); }
   .feature__img--9 {
-    height: 26rem;
     background-image: url(../img/microagulhamento.jpg); }
   .feature__img--9::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/microagulhamento.jpg); }
@@ -393,39 +389,25 @@ body {
     background-position: center; }
 
 .tratamentos {
-  padding: 6rem 0;
-  background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
-  text-align: center;
-  grid-row: 3 / 4;
-  grid-column: full-start / full-end; }
-  .tratamentos__p {
-    font-size: 1.8rem;
-    color: var(--gray-1);
-    font-family: var(--font-heading);
-    margin-top: 3rem;
-    text-transform: uppercase; }
-
-.depilacao {
   grid-row: 3 / 4;
   grid-column: center-start / center-end;
   margin: 9rem 0; }
-  .depilacao__description {
+  .tratamentos__description {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-    align-items: center; }
-  .depilacao__description--text {
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-gap: 3rem; }
+  .tratamentos__description--text {
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    padding: 2rem 5rem;
-    margin: 3rem 0;
-    grid-column: 2 / 3; }
-  .depilacao__img {
-    width: 35rem;
-    margin: 0 auto; }
-  .depilacao__btn {
-    grid-row: 2 / 3;
+    padding: 2rem 5rem; }
+  .tratamentos__img {
+    grid-row: 1 / 2;
     grid-column: 1 / 2;
-    align-self: start; }
+    justify-self: center;
+    width: 40rem; }
+  .tratamentos__btn {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    align-self: end; }
 
 .map {
   grid-row: 7 / 8;

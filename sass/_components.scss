@@ -26,8 +26,6 @@
 }
 
 .btn-link{
-    grid-column: 2 / 3;
-
     position: relative;
     text-decoration: none;
     font-size: 2rem;
@@ -36,7 +34,6 @@
     background-image: linear-gradient(to right, var(--color-primary-dark),
     var(--color-primary-light));
     padding: 1.1rem 3rem;
-    margin-bottom: 3rem;
     border-radius: 5rem;
     display: inline-block;
     justify-self: center;
