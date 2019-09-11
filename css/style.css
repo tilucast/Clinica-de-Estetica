@@ -142,7 +142,20 @@ body {
   grid-template-rows: min-content 25vh;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
-.header {
+.header-2, .header-3, .header-4, .header-5, .header-6, .header-7, .header-8, .header-9, .header-10, .header-11 {
+  grid-row: 2/3;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: 1fr;
+  background-size: cover; }
+
+.header-2__h2, .header-3__h2, .header-4__h2, .header-5__h2, .header-6__h2, .header-7__h2, .header-8__h2, .header-9__h2, .header-10__h2, .header-11__h2 {
+  align-self: center;
+  justify-self: center;
+  margin-top: 6rem;
+  font-weight: 600; }
+
+.capa {
   grid-row: 2 / 3;
   grid-column: full-start / full-end;
   background-image: linear-gradient(rgba(138, 43, 226, 0.5), rgba(138, 43, 226, 0.5)), url(../img/wallhaven-731kdv.jpg);
@@ -150,39 +163,43 @@ body {
   text-align: center;
   display: grid;
   grid-template-rows: 1fr min-content 1fr; }
-  .header__h1 {
+  .capa__h1 {
     align-self: end;
     font-family: var(--font-primary);
     margin-bottom: 2rem; }
-  .header__btn {
+  .capa__btn {
     justify-self: center;
     align-self: center; }
 
 .header-2 {
-  grid-row: 2 / 3;
-  grid-column: full-start / full-end;
-  display: grid;
-  grid-template-rows: 1fr;
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/wallhaven-73wpro.jpg);
-  background-size: cover; }
-  .header-2__h2 {
-    align-self: center;
-    justify-self: center;
-    margin-top: 6rem;
-    font-weight: 600; }
+  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/wallhaven-73wpro.jpg); }
 
 .header-3 {
-  grid-row: 2/3;
-  grid-column: full-start / full-end;
-  display: grid;
-  grid-template-rows: 1fr;
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/depilacao_a_laser.jpg);
-  background-size: cover; }
-  .header-3__h2 {
-    align-self: center;
-    justify-self: center;
-    margin-top: 6rem;
-    font-weight: 600; }
+  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/depilacao_a_laser.jpg); }
+
+.header-4 {
+  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/Carboxiterapia-620x330.jpg); }
+
+.header-5 {
+  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/corrente-russa-620x330.jpg); }
+
+.header-6 {
+  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/criolipolise.jpeg); }
+
+.header-7 {
+  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/serv_est_drenagemLinfatica.jpg); }
+
+.header-8 {
+  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/massagem-express.jpg); }
+
+.header-9 {
+  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/preenchimento.jpg); }
+
+.header-10 {
+  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/heccus.jpg); }
+
+.header-11 {
+  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/microagulhamento.jpg); }
 
 .heading {
   padding: 6rem 0;

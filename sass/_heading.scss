@@ -1,4 +1,24 @@
-.header{
+%general-headings{
+    grid-row: 2/3;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-rows: 1fr;
+
+    background-size: cover;
+}
+
+%general-headings__h2{
+    align-self: center;
+    justify-self: center;
+
+    margin-top: 6rem;
+    font-weight: 600;
+}
+
+
+//MAIN HEADING OF THE MAIN PAGE
+.capa{
     grid-row: 2 / 3;
     grid-column: full-start / full-end;
 
@@ -23,46 +43,119 @@
     }
 }
 
-.header-2{
-    grid-row: 2 / 3;
-    grid-column: full-start / full-end;
 
-    display: grid;
-    grid-template-rows: 1fr;
+//HEADINGS FOR EACH OF THE TREATMENTS PAGE
+.header-2{
+    @extend %general-headings;
 
     background-image: linear-gradient(rgba(blueviolet, .7), rgba(blueviolet, .7)),
     url(../img/wallhaven-73wpro.jpg);
-    background-size: cover;
 
     &__h2{
-    align-self: center;
-    justify-self: center;
-
-    margin-top: 6rem;
-    font-weight: 600;
+        @extend %general-headings__h2;
     }
 }
 
 .header-3{
-    grid-row: 2/3;
-    grid-column: full-start / full-end;
-
-    display: grid;
-    grid-template-rows: 1fr;
+    @extend %general-headings;
 
     background-image: linear-gradient(rgba(blueviolet, .7), rgba(blueviolet, .7)),
     url(../img/depilacao_a_laser.jpg);
-    background-size: cover;
 
     &__h2{
-        align-self: center;
-        justify-self: center;
-    
-        margin-top: 6rem;
-        font-weight: 600;
-        }
+        @extend %general-headings__h2;
+    }
 }
 
+.header-4{
+    @extend %general-headings;
+
+    background-image: linear-gradient(rgba(blueviolet, .7), rgba(blueviolet, .7)),
+    url(../img/Carboxiterapia-620x330.jpg);
+
+    &__h2{
+        @extend %general-headings__h2;
+    }
+}
+
+.header-5{
+    @extend %general-headings;
+
+    background-image: linear-gradient(rgba(blueviolet, .7), rgba(blueviolet, .7)),
+    url(../img/corrente-russa-620x330.jpg);
+
+    &__h2{
+        @extend %general-headings__h2;
+    }
+}
+
+.header-6{
+    @extend %general-headings;
+
+    background-image: linear-gradient(rgba(blueviolet, .7), rgba(blueviolet, .7)),
+    url(../img/criolipolise.jpeg);
+
+    &__h2{
+        @extend %general-headings__h2;
+    }
+}
+
+.header-7{
+    @extend %general-headings;
+
+    background-image: linear-gradient(rgba(blueviolet, .7), rgba(blueviolet, .7)),
+    url(../img/serv_est_drenagemLinfatica.jpg);
+
+    &__h2{
+        @extend %general-headings__h2;
+    }
+}
+
+.header-8{
+    @extend %general-headings;
+
+    background-image: linear-gradient(rgba(blueviolet, .7), rgba(blueviolet, .7)),
+    url(../img/massagem-express.jpg);
+
+    &__h2{
+        @extend %general-headings__h2;
+    }
+}
+
+.header-9{
+    @extend %general-headings;
+
+    background-image: linear-gradient(rgba(blueviolet, .7), rgba(blueviolet, .7)),
+    url(../img/preenchimento.jpg);
+
+    &__h2{
+        @extend %general-headings__h2;
+    }
+}
+
+.header-10{
+    @extend %general-headings;
+
+    background-image: linear-gradient(rgba(blueviolet, .7), rgba(blueviolet, .7)),
+    url(../img/heccus.jpg);
+
+    &__h2{
+        @extend %general-headings__h2;
+    }
+}
+
+.header-11{
+    @extend %general-headings;
+
+    background-image: linear-gradient(rgba(blueviolet, .7), rgba(blueviolet, .7)),
+    url(../img/microagulhamento.jpg);
+
+    &__h2{
+        @extend %general-headings__h2;
+    }
+}
+
+//HEADING ''TRATAMENTOS'' OF THE MAIN PAGE
 .heading{
     padding: 6rem 0;
     background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
