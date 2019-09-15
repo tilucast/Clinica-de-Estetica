@@ -8,14 +8,14 @@
   padding: 1.5rem 3rem;
   transition: all .2s;
   cursor: pointer;
-  box-shadow: 0rem 2rem 3.5rem rgba(0, 0, 0, 0.5); }
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.5); }
   .btn:hover {
     background-color: var(--color-primary-light);
     transform: scale(1.02);
     box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.4); }
   .btn:focus {
     transform: scale(1);
-    box-shadow: 0rem 2rem 3.5rem rgba(0, 0, 0, 0.5); }
+    box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.5); }
 
 .btn-link {
   position: relative;
@@ -120,6 +120,35 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 48%; } }
+  @media only screen and (max-width: 43.75em) {
+    html {
+      font-size: 41%; }
+      html .features__btn {
+        grid-column: auto; }
+      html .capa {
+        background-size: 100% 100%; } }
+  @media only screen and (max-width: 38.75em) {
+    html {
+      font-size: 36%; } }
+  @media only screen and (max-width: 31.25em) {
+    html {
+      font-size: 30%; }
+      html .container-2 {
+        grid-template-rows: min-content 29vh; } }
+  @media only screen and (max-width: 28.125em) {
+    html {
+      font-size: 27%; } }
+  @media only screen and (max-width: 25em) {
+    html {
+      font-size: 23%; }
+      html .features {
+        grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr)); } }
 
 body {
   font-family: var(--font-primary);
@@ -142,14 +171,14 @@ body {
   grid-template-rows: min-content 25vh;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
-.header-2, .header-3, .header-4, .header-5, .header-6, .header-7, .header-8, .header-9, .header-10, .header-11 {
+.header-2, .header-3, .header-4, .header-5, .header-6, .header-7, .header-8, .header-9, .header-10, .header-11, .header-12 {
   grid-row: 2/3;
   grid-column: full-start / full-end;
   display: grid;
   grid-template-rows: 1fr;
   background-size: cover; }
 
-.header-2__h2, .header-3__h2, .header-4__h2, .header-5__h2, .header-6__h2, .header-7__h2, .header-8__h2, .header-9__h2, .header-10__h2, .header-11__h2 {
+.header-2__h2, .header-3__h2, .header-4__h2, .header-5__h2, .header-6__h2, .header-7__h2, .header-8__h2, .header-9__h2, .header-10__h2, .header-11__h2, .header-12__h2 {
   align-self: center;
   justify-self: center;
   margin-top: 6rem;
@@ -201,6 +230,9 @@ body {
 .header-11 {
   background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/microagulhamento.jpg); }
 
+.header-12 {
+  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/wallhaven-4515o7.jpg); }
+
 .heading {
   padding: 6rem 0;
   background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
@@ -250,7 +282,7 @@ body {
 
 .footer {
   padding: 3rem;
-  grid-row: 8 / 9;
+  grid-row: 9 / 10;
   grid-column: full-start / full-end;
   background-color: var(--color-primary);
   display: flex;
@@ -298,9 +330,11 @@ body {
   grid-row: 4 / 5;
   grid-column: center-start / center-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  grid-auto-rows: min-content;
   grid-gap: 4rem; }
+  .features__btn {
+    grid-column: 2 / 3; }
 
 .feature {
   display: grid;
@@ -322,7 +356,7 @@ body {
       font-weight: 600;
       z-index: 10; }
     .feature__img:hover .feature__img--caption {
-      transform: translate(0, 100px);
+      transform: translate(0, 10rem);
       opacity: 1; }
   .feature__img--1 {
     height: 26rem;
@@ -330,34 +364,43 @@ body {
   .feature__img--1::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/depilacao_a_laser.jpg); }
   .feature__img--2 {
+    height: 26rem;
     background-image: url(../img/Carboxiterapia-620x330.jpg); }
   .feature__img--2::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/Carboxiterapia-620x330.jpg); }
   .feature__img--3 {
+    height: 26rem;
     background-image: url(../img/corrente-russa-620x330.jpg); }
   .feature__img--3::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/corrente-russa-620x330.jpg); }
   .feature__img--4 {
+    height: 26rem;
     background-image: url(../img/criolipolise.jpeg); }
   .feature__img--4::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/criolipolise.jpeg); }
   .feature__img--5 {
+    height: 26rem;
     background-image: url(../img/serv_est_drenagemLinfatica.jpg); }
   .feature__img--5::before {
+    height: 26rem;
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/serv_est_drenagemLinfatica.jpg); }
   .feature__img--6 {
+    height: 26rem;
     background-image: url(../img/massagem-express.jpg); }
   .feature__img--6::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/massagem-express.jpg); }
   .feature__img--7 {
+    height: 26rem;
     background-image: url(../img/preenchimento.jpg); }
   .feature__img--7::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/preenchimento.jpg); }
   .feature__img--8 {
+    height: 26rem;
     background-image: url(../img/heccus.jpg); }
   .feature__img--8::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/heccus.jpg); }
   .feature__img--9 {
+    height: 26rem;
     background-image: url(../img/microagulhamento.jpg); }
   .feature__img--9::before {
     background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/microagulhamento.jpg); }
@@ -427,7 +470,7 @@ body {
     align-self: end; }
 
 .map {
-  grid-row: 7 / 8;
+  grid-row: 8 / 9;
   grid-column: full-start / full-end;
   padding: 5rem 0;
   text-align: center;
@@ -435,6 +478,100 @@ body {
   .map__heading-2 {
     margin-bottom: 5rem;
     color: var(--gray-darker-3); }
+
+iframe {
+  width: 80rem; }
+
+.agendamento {
+  grid-row: 7 / 8;
+  grid-column: center-start / center-end;
+  margin-top: 9rem;
+  text-align: center; }
+  .agendamento__p {
+    text-transform: uppercase;
+    font-size: 2rem; }
+  .agendamento__info {
+    display: grid;
+    grid-template-columns: 5rem 45rem;
+    margin-top: 2rem;
+    justify-content: center; }
+    .agendamento__info--icons {
+      grid-column: 1 / 2;
+      width: 2.3rem;
+      height: 2.3rem;
+      padding: 0.3rem;
+      margin: 1rem 0;
+      fill: white;
+      background-color: var(--color-primary-dark); }
+    .agendamento__info--h4 {
+      grid-column: 2 / 3;
+      font-size: 2rem; }
+
+.h1 {
+  grid-row: 1 / 2;
+  justify-self: start;
+  align-self: center; }
+
+.h2 {
+  grid-row: 2 / 3;
+  justify-self: start;
+  align-self: center; }
+
+.h3 {
+  grid-row: 3 / 4;
+  justify-self: start;
+  align-self: center; }
+
+.p1 {
+  margin-right: 27rem;
+  margin-top: 6rem;
+  font-weight: 600; }
+
+.contato {
+  grid-row: 3 / 4;
+  grid-column: full-start /  full-end;
+  background-color: var(--color-primary-light); }
+  .contato__headings {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .contato__formulario {
+    display: flex;
+    flex-direction: column;
+    margin: 6rem auto;
+    padding: 7rem;
+    width: 80rem;
+    background-color: white; }
+    .contato__formulario--btn {
+      margin-top: 3rem;
+      align-self: center;
+      box-shadow: 0 0 0; }
+    .contato__formulario input[type=text],
+    .contato__formulario input[type=email],
+    .contato__formulario input[type=tel],
+    .contato__formulario textarea {
+      border-radius: .1rem;
+      display: block;
+      padding: 1rem 0 1rem 1.5rem;
+      margin-bottom: 2rem;
+      font-family: inherit;
+      outline: none;
+      border: 1.5px solid #646262;
+      transition: all 0.3s linear; }
+    .contato__formulario input[type=text]:hover,
+    .contato__formulario input[type=email]:hover,
+    .contato__formulario input[type=tel]:hover,
+    .contato__formulario textarea:hover {
+      border-color: black; }
+    .contato__formulario input[type=text]:focus,
+    .contato__formulario input[type=email]:focus,
+    .contato__formulario input[type=tel]:focus,
+    .contato__formulario textarea:focus {
+      border: 1.5px solid var(--color-primary-light); }
+    .contato__formulario input:focus:invalid,
+    .contato__formulario textarea:focus:invalid {
+      border-color: red; }
 
 .services {
   grid-row: 3 / 4;

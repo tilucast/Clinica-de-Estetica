@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet"> 
     <link rel="shortcut icon" href="#" type="image/png">
-    <title>Massagem</title>
+    <title>Fale Conosco</title>
 </head>
 <body class="container-3">
     <nav class="navbar">
@@ -40,7 +40,7 @@
                 </a> 
             </li>
             <li class="nav__item">
-                <a class="nav__link" href="fale-conosco.html">
+                <a class="nav__link" href="#">
                     <svg class="nav__svg">
                             <use xlink:href="img/symbol-defs.svg#icon-clipboard"></use>
                     </svg>
@@ -50,50 +50,31 @@
         </ul>
     </nav>
 
-    <header class="header-8">
-        <h2 class="heading-2 header-8__h2">
-            Massagem
-        </h2>
+    <header class="header-12">
+        <h2 class="heading-2 header-2__h2">Fale Conosco</h2>
     </header>
 
-    <section class="tratamentos">
+    <div class="contato">
 
-        <div class="tratamentos__description">
-
-                <img src="img/massagem-express.jpg" alt="Carboxiterapia" class="tratamentos__img">
-                <a href="#" class="btn-link tratamentos__btn"> Agende Uma Sessão </a>
-
-            <div class="tratamentos__description--text">
-                <h3 class="heading-3"> Descrição </h3>
-                <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo cumque maiores temporibus ex rem recusandae quia praesentium dolor, dolorem magnam voluptas reiciendis animi laudantiu</p>
-
-                <ul class="list">
-                    <li class="list__item">Tipografia está bacaníssima</li>
-                    <li class="list__item">YYYYYYY</li>
-                    <li class="list__item">ZZZZZZZ</li>
-                </ul>
-            </div>
-
-            <div class="tratamentos__description--text">
-                <h3 class="heading-3"> Como Funciona </h3>
-                <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo cumque maiores temporibus ex rem recusandae quia praesentium dolor, dolorem magnam voluptas reiciendis animi laudantiu</p>
-
-            </div>
-
-            <div class="tratamentos__description--text">
-                <h3 class="heading-3"> Resultados </h3>
-                
-                <ul class="list">
-                    <li class="list__item">X coisa acontece</li>
-                    <li class="list__item">YYYYYYY</li>
-                    <li class="list__item">ZZZZZZZ</li>
-                    <li class="list__item">AAAAAAA</li>
-                </ul>
-            </div>
-
+        <div class="contato__headings">
+            <h2 class="heading-2">Fale Conosco</h2>
+            <h4 class="heading-4">Tem alguma dúvida, crítica ou sugestão?</h4>
         </div>
 
-    </section>
+        <section class="contato__formulario">
+
+            <p class="paragraph">Nome Completo</p>
+            <input type="text" name="nome" placeholder="José da Silva" required>
+            <p class="paragraph">E-Mail</p>
+            <input type="email" name="email" placeholder="joaosilva@site.com" required>
+            <p class="paragraph">Telefone</p>
+            <input type="tel" name="telefone" placeholder="Ex: 61 988818881">
+            <p class="paragraph">Mensagem</p>
+            <textarea name="mensagem" cols="5" rows="5" required></textarea>
+
+            <input type="submit" value="Enviar" class="btn contato__formulario--btn">
+        </section>
+    </div>
 
     <footer class="footer">
         

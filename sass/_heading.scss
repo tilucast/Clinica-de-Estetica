@@ -154,6 +154,16 @@
         @extend %general-headings__h2;
     }
 }
+.header-12{
+    @extend %general-headings;
+
+    background-image: linear-gradient(rgba(blueviolet, .7), rgba(blueviolet, .7)),
+    url(../img/wallhaven-4515o7.jpg);
+
+    &__h2{
+        @extend %general-headings__h2;
+    }
+}
 
 //HEADING ''TRATAMENTOS'' OF THE MAIN PAGE
 .heading{
