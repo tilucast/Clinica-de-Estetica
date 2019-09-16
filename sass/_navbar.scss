@@ -7,7 +7,6 @@
 
     &__img{
         width: 80%;
-        //margin-left: 2rem;
     }
 
 }
@@ -34,9 +33,18 @@
         transition: all .2s;
     }
 
+    &__link:focus{
+        color: var(--color-primary-dark);
+        fill: var(--color-primary-dark);
+    }
+
     &__svg:hover,
-    &__link:hover,
-    &__link:active{
+    &__link:hover{
+        color: var(--color-primary-dark);
+        fill: var(--color-primary-dark);
+    }
+    
+    &__svg:focus{
         color: var(--color-primary-dark);
         fill: var(--color-primary-dark);
     }
@@ -45,5 +53,12 @@
         width: 2rem;
         height: 2rem;
         transform: translateY(.3rem);
+        cursor: pointer;
+
+        &--menu{
+            display: none;
+            width: 4rem;
+        }
     }
+    
 }

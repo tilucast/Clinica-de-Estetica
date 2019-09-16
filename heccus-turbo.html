@@ -11,19 +11,19 @@
     <title>Heccus Turbo</title>
 </head>
 <body class="container-3">
-    <nav class="navbar">
+    <nav class="navbar" id="topNav">
 
         <ul class="nav">
                 <img src="img/clinica-estetica-sudoeste-brasilia-df.jpg" alt="Logo clinica" class="navbar__img navbar__section">
-            <li class="nav__item"> 
-                <a class="nav__link" href="index.html">
+            <li class="nav__item nav__item--1"> 
+                <a class="nav__link" href="#">
                     <svg class="nav__svg">
                             <use xlink:href="img/symbol-defs.svg#icon-home"></use>
                     </svg>
                     Home
                 </a> 
             </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item--2">
                 <a class="nav__link" href="tratamentos.html">
                     <svg class="nav__svg">
                             <use xlink:href="img/symbol-defs.svg#icon-lab"></use>
@@ -31,21 +31,21 @@
                     Tratamentos
                 </a> 
             </li>
-            <li class="nav__item">
-                <a class="nav__link" href="tratamentos.html">
-                    <svg class="nav__svg">
-                            <use xlink:href="img/symbol-defs.svg#icon-quill"></use>
-                    </svg>
-                    Blog
-                </a> 
-            </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item--3">
                 <a class="nav__link" href="fale-conosco.html">
                     <svg class="nav__svg">
                             <use xlink:href="img/symbol-defs.svg#icon-clipboard"></use>
                     </svg>
                     Fale Conosco
                 </a> 
+            </li>
+
+            <li class="nav__item nav__item--4">
+                <a class="nav__link" onclick="navbarCollapse()">
+                    <svg class="nav__svg nav__svg--menu">
+                        <use xlink:href="img/symbol-defs.svg#icon-menu"></use>
+                    </svg>
+                </a>
             </li>
         </ul>
     </nav>
@@ -118,5 +118,7 @@
         </div>
         
     </footer>  
+
+    <script src="functions.js"></script>
 </body>
 </html>
