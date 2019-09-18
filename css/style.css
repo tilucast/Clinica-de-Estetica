@@ -139,18 +139,16 @@ html {
       html .navbar__img {
         display: none; }
       html .navbar .nav .nav__item--2, html .nav__item--3 {
-        display: none; }
+        display: none;
+        animation: navResponsiveIconAnimation 1.9s; }
       html .navbar .nav .nav__item--4 {
         grid-column: 5 / 6; }
       html .navbar .nav .nav__item .nav__svg--menu {
         display: block; }
-      html .navbar.responsive {
-        display: flex;
-        flex-direction: column; }
       html .navbar.responsive .nav {
-        height: 12vh; }
-      html .navbar.responsive .nav {
-        justify-items: start; }
+        height: 18vh;
+        justify-items: start;
+        animation: navResponsiveAnimation 1s; }
       html .navbar.responsive .nav .nav__item--2 {
         grid-row: 2 / 3; }
       html .navbar.responsive .nav .nav__item--3 {
@@ -271,6 +269,7 @@ body {
   background-color: white;
   position: fixed;
   width: 100%;
+  transition: top 0.4s;
   grid-column: full-start / full-end;
   z-index: 100; }
   .navbar__img {
@@ -280,9 +279,13 @@ body {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(5, minmax(15rem, 1fr));
-  grid-gap: 2rem;
   height: 8vh;
   align-items: center; }
+  .nav__item {
+    width: 100%;
+    transition: all .4s; }
+  .nav__item:hover {
+    background-color: var(--color-primary-dark); }
   .nav__link:link, .nav__link:visited {
     text-decoration: none;
     color: var(--gray-darker-3);
@@ -294,14 +297,14 @@ body {
     padding: 1rem;
     transition: all .2s; }
   .nav__link:focus {
-    color: var(--color-primary-dark);
-    fill: var(--color-primary-dark); }
+    color: white;
+    fill: white; }
   .nav__svg:hover, .nav__link:hover {
-    color: var(--color-primary-dark);
-    fill: var(--color-primary-dark); }
+    color: white;
+    fill: white; }
   .nav__svg:focus {
-    color: var(--color-primary-dark);
-    fill: var(--color-primary-dark); }
+    color: white;
+    fill: white; }
   .nav__svg {
     width: 2rem;
     height: 2rem;
@@ -603,6 +606,24 @@ iframe {
     .contato__formulario input:focus:invalid,
     .contato__formulario textarea:focus:invalid {
       border-color: red; }
+
+@keyframes navResponsiveAnimation {
+  0% {
+    height: 8vh; }
+  100% {
+    height: 18vh; } }
+
+@keyframes navGoingBack {
+  0% {
+    height: 18vh; }
+  100% {
+    height: 8vh; } }
+
+@keyframes navResponsiveIconAnimation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .services {
   grid-row: 3 / 4;
