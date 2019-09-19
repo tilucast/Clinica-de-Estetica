@@ -1,7 +1,7 @@
 :root{
-    --color-primary-light: rgb(138, 43, 226);
-    --color-primary: rgb(101, 8, 187);
-    --color-primary-dark: rgb(81, 4, 153);
+    --color-primary-light: #ac114a;
+    --color-primary: #750b32;
+    --color-primary-dark: #510722;
 
 
     --gray-1: rgb(241, 241, 241);
@@ -61,6 +61,7 @@ html{
 
     @media only screen and (max-width: $bp-620){
         font-size: 36%; //5.76px
+
         .navbar__img{ display: none;}
 
         .navbar .nav .nav__item--2, .nav__item--3 {
@@ -79,6 +80,7 @@ html{
         .navbar.responsive .nav{ height: 18vh; 
             justify-items: start;
             animation: navResponsiveAnimation 1s;
+            transition: all 1s;
         }
 
         .navbar.responsive .nav .nav__item--2{

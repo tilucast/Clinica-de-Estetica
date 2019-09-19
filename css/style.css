@@ -95,9 +95,9 @@
     font-size: 1.7rem; }
 
 :root {
-  --color-primary-light: rgb(138, 43, 226);
-  --color-primary: rgb(101, 8, 187);
-  --color-primary-dark: rgb(81, 4, 153);
+  --color-primary-light: #ac114a;
+  --color-primary: #750b32;
+  --color-primary-dark: #510722;
   --gray-1: rgb(241, 241, 241);
   --gray-2: rgb(230, 230, 230);
   --gray-3: rgb(218, 218, 218);
@@ -148,7 +148,8 @@ html {
       html .navbar.responsive .nav {
         height: 18vh;
         justify-items: start;
-        animation: navResponsiveAnimation 1s; }
+        animation: navResponsiveAnimation 1s;
+        transition: all 1s; }
       html .navbar.responsive .nav .nav__item--2 {
         grid-row: 2 / 3; }
       html .navbar.responsive .nav .nav__item--3 {
@@ -206,7 +207,7 @@ body {
 .capa {
   grid-row: 2 / 3;
   grid-column: full-start / full-end;
-  background-image: linear-gradient(rgba(138, 43, 226, 0.5), rgba(138, 43, 226, 0.5)), url(../img/wallhaven-731kdv.jpg);
+  background-image: linear-gradient(rgba(147, 112, 219, 0.5), rgba(147, 112, 219, 0.5)), url(../img/wallhaven-731kdv.jpg);
   background-size: cover;
   text-align: center;
   display: grid;
@@ -220,37 +221,37 @@ body {
     align-self: center; }
 
 .header-2 {
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/wallhaven-73wpro.jpg); }
+  background-image: linear-gradient(rgba(147, 112, 219, 0.7), rgba(147, 112, 219, 0.7)), url(../img/wallhaven-73wpro.jpg); }
 
 .header-3 {
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/depilacao_a_laser.jpg); }
+  background-image: linear-gradient(rgba(147, 112, 219, 0.7), rgba(147, 112, 219, 0.7)), url(../img/depilacao_a_laser.jpg); }
 
 .header-4 {
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/Carboxiterapia-620x330.jpg); }
+  background-image: linear-gradient(rgba(147, 112, 219, 0.7), rgba(147, 112, 219, 0.7)), url(../img/Carboxiterapia-620x330.jpg); }
 
 .header-5 {
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/corrente-russa-620x330.jpg); }
+  background-image: linear-gradient(rgba(147, 112, 219, 0.7), rgba(147, 112, 219, 0.7)), url(../img/corrente-russa-620x330.jpg); }
 
 .header-6 {
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/criolipolise.jpeg); }
+  background-image: linear-gradient(rgba(147, 112, 219, 0.7), rgba(147, 112, 219, 0.7)), url(../img/criolipolise.jpeg); }
 
 .header-7 {
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/serv_est_drenagemLinfatica.jpg); }
+  background-image: linear-gradient(rgba(147, 112, 219, 0.7), rgba(147, 112, 219, 0.7)), url(../img/serv_est_drenagemLinfatica.jpg); }
 
 .header-8 {
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/massagem-express.jpg); }
+  background-image: linear-gradient(rgba(147, 112, 219, 0.7), rgba(147, 112, 219, 0.7)), url(../img/massagem-express.jpg); }
 
 .header-9 {
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/preenchimento.jpg); }
+  background-image: linear-gradient(rgba(147, 112, 219, 0.7), rgba(147, 112, 219, 0.7)), url(../img/preenchimento.jpg); }
 
 .header-10 {
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/heccus.jpg); }
+  background-image: linear-gradient(rgba(147, 112, 219, 0.7), rgba(147, 112, 219, 0.7)), url(../img/heccus.jpg); }
 
 .header-11 {
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/microagulhamento.jpg); }
+  background-image: linear-gradient(rgba(147, 112, 219, 0.7), rgba(147, 112, 219, 0.7)), url(../img/microagulhamento.jpg); }
 
 .header-12 {
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/wallhaven-4515o7.jpg); }
+  background-image: linear-gradient(rgba(147, 112, 219, 0.7), rgba(147, 112, 219, 0.7)), url(../img/wallhaven-4515o7.jpg); }
 
 .heading {
   padding: 6rem 0;
@@ -269,11 +270,15 @@ body {
   background-color: white;
   position: fixed;
   width: 100%;
-  transition: top 0.4s;
+  transition: all 0.4s;
   grid-column: full-start / full-end;
   z-index: 100; }
   .navbar__img {
     width: 80%; }
+
+.onoff {
+  border: none;
+  background-color: transparent; }
 
 .nav {
   list-style: none;
@@ -396,48 +401,48 @@ body {
     height: 26rem;
     background-image: url(../img/depilacao_a_laser.jpg); }
   .feature__img--1::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/depilacao_a_laser.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/depilacao_a_laser.jpg); }
   .feature__img--2 {
     height: 26rem;
     background-image: url(../img/Carboxiterapia-620x330.jpg); }
   .feature__img--2::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/Carboxiterapia-620x330.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/Carboxiterapia-620x330.jpg); }
   .feature__img--3 {
     height: 26rem;
     background-image: url(../img/corrente-russa-620x330.jpg); }
   .feature__img--3::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/corrente-russa-620x330.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/corrente-russa-620x330.jpg); }
   .feature__img--4 {
     height: 26rem;
     background-image: url(../img/criolipolise.jpeg); }
   .feature__img--4::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/criolipolise.jpeg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/criolipolise.jpeg); }
   .feature__img--5 {
     height: 26rem;
     background-image: url(../img/serv_est_drenagemLinfatica.jpg); }
   .feature__img--5::before {
     height: 26rem;
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/serv_est_drenagemLinfatica.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/serv_est_drenagemLinfatica.jpg); }
   .feature__img--6 {
     height: 26rem;
     background-image: url(../img/massagem-express.jpg); }
   .feature__img--6::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/massagem-express.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/massagem-express.jpg); }
   .feature__img--7 {
     height: 26rem;
     background-image: url(../img/preenchimento.jpg); }
   .feature__img--7::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/preenchimento.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/preenchimento.jpg); }
   .feature__img--8 {
     height: 26rem;
     background-image: url(../img/heccus.jpg); }
   .feature__img--8::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/heccus.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/heccus.jpg); }
   .feature__img--9 {
     height: 26rem;
     background-image: url(../img/microagulhamento.jpg); }
   .feature__img--9::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/microagulhamento.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/microagulhamento.jpg); }
 
 .gallery {
   grid-row: 5 / 6;

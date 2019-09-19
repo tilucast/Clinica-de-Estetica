@@ -1,8 +1,8 @@
 .navbar{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     position: fixed;
     width: 100%;
-    transition: top 0.4s;
+    transition: all 0.4s;
 
     grid-column: full-start / full-end;
     z-index: 100;
@@ -12,6 +12,8 @@
     }
 
 }
+
+.onoff{ border: none; background-color: transparent;}
 
 .nav{
     list-style: none;

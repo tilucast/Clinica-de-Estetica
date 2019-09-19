@@ -7,14 +7,18 @@ function navbarCollapse(){
     }
 };
 
+
+
 let prevScroll = window.pageYOffset;
 window.onscroll = function (){
     let currentScroll = window.pageYOffset;
+    const navbarPosition =  document.querySelector('.navbar');
+    
     if(prevScroll > currentScroll){
-        document.querySelector('.navbar').style.top = '0';
+        navbarPosition.style.top = '0';
     }  else{
-        document.querySelector('.navbar').style.top = '-75px';
+        navbarPosition.style.top = '-120px';
     }
-
     prevScroll = currentScroll;
 }
+
