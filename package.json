@@ -7,7 +7,6 @@
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server --browser=firefox",
     "start": "npm-run-all --parallel devserver watch:sass",
-
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
@@ -16,6 +15,7 @@
   "author": "Lucas Tavares",
   "license": "ISC",
   "devDependencies": {
+    "aos": "^2.3.4",
     "autoprefixer": "^7.1.4",
     "concat": "^1.0.3",
     "node-sass": "^4.5.3",
