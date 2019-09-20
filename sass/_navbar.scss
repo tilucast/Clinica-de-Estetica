@@ -13,23 +13,22 @@
 
 }
 
-.onoff{ border: none; background-color: transparent;}
-
 .nav{
     list-style: none;
 
     display: grid;
     grid-template-columns: repeat(5, minmax(15rem, 1fr));
+    
 
     height: 8vh;
     align-items: center;
 
     &__item{
-        width: 100%;
+        width:100%;
         transition: all .4s;
     }
 
-    &__item:hover{
+    &__item:hover:not(:last-child){
         background-color: var(--color-primary-dark);
     }
 
@@ -37,7 +36,7 @@
     &__link:visited{
         text-decoration: none;
         color: var(--gray-darker-3);
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 600;
         text-transform: uppercase;
         text-align: center;
@@ -51,13 +50,8 @@
         fill: white;
     }
 
-    &__svg:hover,
-    &__link:hover{
-        color: white;
-        fill: white;
-    }
-    
-    &__svg:focus{
+    &__link:hover,
+    &__link:focus{
         color: white;
         fill: white;
     }
@@ -72,6 +66,8 @@
             display: none;
             width: 4rem;
         }
+
+        &--menu:hover{ fill: var(--color-primary-dark);}
     }
     
 }

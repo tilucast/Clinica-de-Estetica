@@ -61,35 +61,38 @@ html{
 
     @media only screen and (max-width: $bp-620){
         font-size: 36%; //5.76px
-
-        .navbar__img{ display: none;}
-
-        .navbar .nav .nav__item--2, .nav__item--3 {
+        .navbar .nav .nav__item--1, .nav__item--2, .nav__item--3 {
             display: none;
             animation: navResponsiveIconAnimation 1.9s;
         }
 
-        .navbar .nav .nav__item--4 { 
-            grid-column:  5 / 6;
-        }
+        .navbar .nav .nav__item .nav__svg{ width: 3rem;}
 
         .navbar .nav .nav__item .nav__svg--menu{ 
             display: block;
         }
 
-        .navbar.responsive .nav{ height: 18vh; 
+        .navbar.responsive .nav{ height: 20vh; 
             justify-items: start;
             animation: navResponsiveAnimation 1s;
             transition: all 1s;
         }
 
-        .navbar.responsive .nav .nav__item--2{
+        .navbar.responsive .nav .nav__item--1{
             grid-row: 2 / 3;
          }
 
-         .navbar.responsive .nav .nav__item--3{
+        .navbar.responsive .nav .nav__item--2{
             grid-row: 3 / 4;
          }
+
+         .navbar.responsive .nav .nav__item--3{
+            grid-row: 4 / 5;
+         }
+
+         .navbar .nav .nav__item--4 { 
+            grid-column:  5 / 6;
+        }
         .navbar.responsive .nav .nav__item { display: block;}
     }
 
