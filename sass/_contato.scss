@@ -14,6 +14,7 @@
     &__formulario{
         display: flex;
         flex-direction: column;
+        animation: formContatoAnimated 1.5s;
 
         margin: 6rem auto;
         padding: 7rem;
@@ -52,12 +53,12 @@
         input[type=email]:focus,
         input[type=tel]:focus,
         textarea:focus{
-            border: 1.5px solid var(--color-primary-light);
+            border: 1.5px solid green;
         }
 
         input:focus:invalid,
         textarea:focus:invalid{
-            border-color: red;
+            border: 1.5px solid red;
         }
 
     }

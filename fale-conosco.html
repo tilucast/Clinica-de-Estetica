@@ -61,19 +61,20 @@
             <h4 class="heading-4">Tem alguma dúvida, crítica ou sugestão?</h4>
         </div>
 
-        <section class="contato__formulario">
+        
+            <form class="contato__formulario" action="">
+                <p class="paragraph">Nome Completo</p>
+                <input type="text" name="nome" placeholder="José da Silva" required>
+                <p class="paragraph">E-Mail</p>
+                <input type="email" name="email" placeholder="joaosilva@site.com" required>
+                <p class="paragraph">Telefone</p>
+                <input type="tel" name="telefone" placeholder="Ex: 61 988818881">
+                <p class="paragraph">Mensagem</p>
+                <textarea name="mensagem" cols="5" rows="5" required></textarea>
 
-            <p class="paragraph">Nome Completo</p>
-            <input type="text" name="nome" placeholder="José da Silva" required>
-            <p class="paragraph">E-Mail</p>
-            <input type="email" name="email" placeholder="joaosilva@site.com" required>
-            <p class="paragraph">Telefone</p>
-            <input type="tel" name="telefone" placeholder="Ex: 61 988818881">
-            <p class="paragraph">Mensagem</p>
-            <textarea name="mensagem" cols="5" rows="5" required></textarea>
-
-            <input type="submit" value="Enviar" class="btn contato__formulario--btn">
-        </section>
+                <input type="submit" value="Enviar" class="btn contato__formulario--btn">
+            </form>
+        
     </div>
 
     <footer class="footer">
