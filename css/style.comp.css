@@ -8,17 +8,16 @@
   padding: 1.5rem 3rem;
   transition: all .2s;
   cursor: pointer;
-  box-shadow: 0rem 2rem 3.5rem rgba(0, 0, 0, 0.5); }
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.5); }
   .btn:hover {
     background-color: var(--color-primary-light);
     transform: scale(1.02);
     box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.4); }
   .btn:focus {
     transform: scale(1);
-    box-shadow: 0rem 2rem 3.5rem rgba(0, 0, 0, 0.5); }
+    box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.5); }
 
 .btn-link {
-  grid-column: 2 / 3;
   position: relative;
   text-decoration: none;
   font-size: 2rem;
@@ -26,12 +25,10 @@
   color: var(--gray-2);
   background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
   padding: 1.1rem 3rem;
-  margin-bottom: 3rem;
   border-radius: 5rem;
   display: inline-block;
   justify-self: center;
   align-self: center;
-  box-shadow: 0rem 1.3rem 1.3rem rgba(0, 0, 0, 0.2);
   background-size: cover;
   z-index: 0;
   transition: all .5s; }
@@ -73,14 +70,14 @@
   font-family: var(--font-heading);
   font-weight: 400;
   text-transform: uppercase;
-  color: var(--gray-3); }
+  color: var(--gray-1); }
 
 .heading-3 {
   font-size: 3rem;
   font-family: var(--font-heading);
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--gray-3); }
+  color: var(--color-primary); }
 
 .heading-4 {
   font-size: 2.5rem;
@@ -89,10 +86,21 @@
   font-weight: 600;
   color: var(--gray-1); }
 
+.paragraph {
+  font-size: 1.9rem; }
+
+.list {
+  margin: 1rem 0; }
+  .list__item {
+    font-size: 1.7rem; }
+
+.span-red {
+  color: var(--color-primary-light); }
+
 :root {
-  --color-primary-light: rgb(138, 43, 226);
-  --color-primary: rgb(101, 8, 187);
-  --color-primary-dark: rgb(81, 4, 153);
+  --color-primary-light: #ac114a;
+  --color-primary: #750b32;
+  --color-primary-dark: #510722;
   --gray-1: rgb(241, 241, 241);
   --gray-2: rgb(230, 230, 230);
   --gray-3: rgb(218, 218, 218);
@@ -115,6 +123,65 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 48%; } }
+  @media only screen and (max-width: 43.75em) {
+    html {
+      font-size: 41%; }
+      html .features__btn {
+        grid-column: auto; }
+      html .capa {
+        background-size: 100% 100%; } }
+  @media only screen and (max-width: 38.75em) {
+    html {
+      font-size: 36%; }
+      html .navbar .nav .nav__item--1, html .nav__item--2, html .nav__item--3 {
+        display: none;
+        animation: navResponsiveIconAnimation 1.9s;
+        grid-column: 1 / span 2; }
+      html .navbar .nav .nav__item .nav__svg {
+        width: 3rem; }
+      html .navbar .nav .nav__item .nav__svg--menu {
+        display: block; }
+      html .navbar__img {
+        grid-column: 1 / span 2; }
+      html .navbar.responsive .nav {
+        height: 20vh;
+        animation: navResponsiveAnimation 1s;
+        transition: all 1s; }
+      html .navbar.responsive .nav .nav__item--1 {
+        grid-row: 2 / 3; }
+      html .navbar.responsive .nav .nav__item--2 {
+        grid-row: 3 / 4; }
+      html .navbar.responsive .nav .nav__item--3 {
+        grid-row: 4 / 5; }
+      html .navbar .nav .nav__item--4 {
+        grid-column: 5 / 6; }
+      html .navbar.responsive .nav .nav__item {
+        display: block; }
+      html .tratamentos__description {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+        grid-gap: 3rem; }
+      html .tratamentos__img {
+        width: 50rem; } }
+  @media only screen and (max-width: 31.25em) {
+    html {
+      font-size: 30%; }
+      html .container-2 {
+        grid-template-rows: min-content 29vh; } }
+  @media only screen and (max-width: 28.125em) {
+    html {
+      font-size: 27%; } }
+  @media only screen and (max-width: 25em) {
+    html {
+      font-size: 23%; }
+      html .features {
+        grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr)); } }
 
 body {
   font-family: var(--font-primary);
@@ -124,7 +191,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: min-content 100vh min-content repeat(4, min-content);
+  grid-template-rows: min-content 100vh;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .container-2 {
@@ -132,39 +199,91 @@ body {
   grid-template-rows: min-content 35vh;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
-.header {
+.container-3 {
+  display: grid;
+  grid-template-rows: min-content 25vh;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.header-2, .header-3, .header-4, .header-5, .header-6, .header-7, .header-8, .header-9, .header-10, .header-11, .header-12 {
+  grid-row: 2/3;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: 1fr;
+  background-size: cover; }
+
+.header-2__h2, .header-3__h2, .header-4__h2, .header-5__h2, .header-6__h2, .header-7__h2, .header-8__h2, .header-9__h2, .header-10__h2, .header-11__h2, .header-12__h2 {
+  align-self: center;
+  justify-self: center;
+  margin-top: 6rem;
+  font-weight: 600; }
+
+.capa {
   grid-row: 2 / 3;
   grid-column: full-start / full-end;
-  background-image: linear-gradient(rgba(138, 43, 226, 0.5), rgba(138, 43, 226, 0.5)), url(../img/wallhaven-731kdv.jpg);
+  background-image: url(../img/wallhaven-731kdv.jpg);
   background-size: cover;
   text-align: center;
   display: grid;
   grid-template-rows: 1fr min-content 1fr; }
-  .header__h1 {
+  .capa__h1 {
     align-self: end;
     font-family: var(--font-primary);
     margin-bottom: 2rem; }
-  .header__btn {
+  .capa__btn {
     justify-self: center;
     align-self: center; }
 
 .header-2 {
-  grid-row: 2 / 3;
-  grid-column: full-start / full-end;
-  display: grid;
-  grid-template-rows: 1fr;
-  background-image: linear-gradient(rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0.7)), url(../img/wallhaven-73wpro.jpg);
-  background-size: cover; }
-  .header-2__h2 {
-    align-self: center;
-    justify-self: center;
-    margin-top: 6rem;
-    font-weight: 600; }
+  background-image: linear-gradient(rgba(220, 20, 60, 0.4), rgba(252, 116, 143, 0.7)), url(../img/wallhaven-73wpro.jpg); }
+
+.header-3 {
+  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/depilacao_a_laser.jpg); }
+
+.header-4 {
+  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/Carboxiterapia-620x330.jpg); }
+
+.header-5 {
+  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/corrente-russa-620x330.jpg); }
+
+.header-6 {
+  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/criolipolise.jpeg); }
+
+.header-7 {
+  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/serv_est_drenagemLinfatica.jpg); }
+
+.header-8 {
+  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/massagem-express.jpg); }
+
+.header-9 {
+  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/preenchimento.jpg); }
+
+.header-10 {
+  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/heccus.jpg); }
+
+.header-11 {
+  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/microagulhamento.jpg); }
+
+.header-12 {
+  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/wallhaven-4515o7.jpg); }
+
+.heading {
+  padding: 6rem 0;
+  background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+  text-align: center;
+  grid-row: 3 / 4;
+  grid-column: full-start / full-end; }
+  .heading__p {
+    font-size: 1.8rem;
+    color: var(--gray-1);
+    font-family: var(--font-heading);
+    margin-top: 3rem;
+    text-transform: uppercase; }
 
 .navbar {
   background-color: white;
   position: fixed;
   width: 100%;
+  transition: all 0.4s;
   grid-column: full-start / full-end;
   z-index: 100; }
   .navbar__img {
@@ -174,31 +293,43 @@ body {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(5, minmax(15rem, 1fr));
-  grid-gap: 2rem;
   height: 8vh;
   align-items: center; }
+  .nav__item {
+    width: 100%;
+    transition: all .4s; }
+  .nav__item:hover:not(:last-child) {
+    background-color: var(--color-primary-dark); }
   .nav__link:link, .nav__link:visited {
     text-decoration: none;
     color: var(--gray-darker-3);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
     display: block;
     padding: 1rem;
     transition: all .2s; }
-  .nav__svg:hover, .nav__link:hover, .nav__link:active {
-    color: var(--color-primary-dark);
-    fill: var(--color-primary-dark); }
+  .nav__link:focus {
+    color: white;
+    fill: white; }
+  .nav__link:hover, .nav__link:focus {
+    color: white;
+    fill: white; }
   .nav__svg {
     width: 2rem;
     height: 2rem;
-    transform: translateY(0.3rem); }
+    transform: translateY(0.3rem);
+    cursor: pointer; }
+    .nav__svg--menu {
+      display: none;
+      width: 4rem; }
+    .nav__svg--menu:hover {
+      fill: var(--color-primary-dark); }
 
 .footer {
   padding: 3rem;
-  border-top: 1px solid var(--color-primary);
-  grid-row: 8 / 9;
+  grid-row: 9 / 10;
   grid-column: full-start / full-end;
   background-color: var(--color-primary);
   display: flex;
@@ -230,8 +361,6 @@ body {
 
 .feature__img--1, .feature__img--2, .feature__img--3, .feature__img--4, .feature__img--5, .feature__img--6, .feature__img--7, .feature__img--8, .feature__img--9 {
   background-size: cover;
-  grid-row: 1 / 4;
-  grid-column: 1 / 3;
   transition: all .3s;
   position: relative;
   z-index: 1; }
@@ -248,21 +377,18 @@ body {
   grid-row: 4 / 5;
   grid-column: center-start / center-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  grid-auto-rows: min-content;
   grid-gap: 4rem; }
+  .features__btn {
+    grid-column: 2 / 3; }
 
 .feature {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   transition: all .2s; }
   .feature__img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-    grid-row: 1 / 4;
-    grid-column: 1 / 3;
     border-radius: .5rem;
     overflow: hidden; }
     .feature__img--caption {
@@ -277,53 +403,54 @@ body {
       font-weight: 600;
       z-index: 10; }
     .feature__img:hover .feature__img--caption {
-      transform: translate(0, 100px);
+      transform: translate(0, 10rem);
       opacity: 1; }
   .feature__img--1 {
     height: 26rem;
     background-image: url(../img/depilacao_a_laser.jpg); }
   .feature__img--1::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/depilacao_a_laser.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/depilacao_a_laser.jpg); }
   .feature__img--2 {
     height: 26rem;
     background-image: url(../img/Carboxiterapia-620x330.jpg); }
   .feature__img--2::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/Carboxiterapia-620x330.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/Carboxiterapia-620x330.jpg); }
   .feature__img--3 {
     height: 26rem;
     background-image: url(../img/corrente-russa-620x330.jpg); }
   .feature__img--3::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/corrente-russa-620x330.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/corrente-russa-620x330.jpg); }
   .feature__img--4 {
     height: 26rem;
     background-image: url(../img/criolipolise.jpeg); }
   .feature__img--4::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/criolipolise.jpeg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/criolipolise.jpeg); }
   .feature__img--5 {
     height: 26rem;
     background-image: url(../img/serv_est_drenagemLinfatica.jpg); }
   .feature__img--5::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/serv_est_drenagemLinfatica.jpg); }
+    height: 26rem;
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/serv_est_drenagemLinfatica.jpg); }
   .feature__img--6 {
     height: 26rem;
     background-image: url(../img/massagem-express.jpg); }
   .feature__img--6::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/massagem-express.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/massagem-express.jpg); }
   .feature__img--7 {
     height: 26rem;
     background-image: url(../img/preenchimento.jpg); }
   .feature__img--7::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/preenchimento.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/preenchimento.jpg); }
   .feature__img--8 {
     height: 26rem;
     background-image: url(../img/heccus.jpg); }
   .feature__img--8::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/heccus.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/heccus.jpg); }
   .feature__img--9 {
     height: 26rem;
     background-image: url(../img/microagulhamento.jpg); }
   .feature__img--9::before {
-    background-image: linear-gradient(rgba(138, 43, 226, 0.9), rgba(138, 43, 226, 0.9)), url(../img/microagulhamento.jpg); }
+    background-image: linear-gradient(rgba(81, 7, 34, 0.9), rgba(137, 37, 67, 0.9)), url(../img/microagulhamento.jpg); }
 
 .gallery {
   grid-row: 5 / 6;
@@ -369,20 +496,29 @@ body {
     background-position: center; }
 
 .tratamentos {
-  padding: 6rem 0;
-  background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
-  text-align: center;
   grid-row: 3 / 4;
-  grid-column: full-start / full-end; }
-  .tratamentos__p {
-    font-size: 1.8rem;
-    color: var(--gray-1);
-    font-family: var(--font-heading);
-    margin-top: 3rem;
-    text-transform: uppercase; }
+  grid-column: center-start / center-end;
+  margin: 9rem 0; }
+  .tratamentos__description {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-gap: 3rem;
+    animation: tratamentosDescAnimation 1.2s; }
+  .tratamentos__description--text {
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem 5rem; }
+  .tratamentos__img {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    justify-self: center;
+    width: 40rem; }
+  .tratamentos__btn {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    align-self: end; }
 
 .map {
-  grid-row: 7 / 8;
+  grid-row: 8 / 9;
   grid-column: full-start / full-end;
   padding: 5rem 0;
   text-align: center;
@@ -391,12 +527,135 @@ body {
     margin-bottom: 5rem;
     color: var(--gray-darker-3); }
 
+iframe {
+  width: 80rem; }
+
+.agendamento {
+  grid-row: 7 / 8;
+  grid-column: center-start / center-end;
+  margin-top: 9rem;
+  text-align: center; }
+  .agendamento__p {
+    text-transform: uppercase;
+    font-size: 2rem; }
+  .agendamento__info {
+    display: grid;
+    grid-template-columns: 5rem 45rem;
+    margin-top: 2rem;
+    justify-content: center; }
+    .agendamento__info--icons {
+      grid-column: 1 / 2;
+      width: 2.3rem;
+      height: 2.3rem;
+      padding: 0.3rem;
+      margin: 1rem 0;
+      fill: white;
+      background-color: var(--color-primary-dark); }
+    .agendamento__info--h4 {
+      grid-column: 2 / 3;
+      font-size: 2rem; }
+
+.h1 {
+  grid-row: 1 / 2;
+  justify-self: start;
+  align-self: center; }
+
+.h2 {
+  grid-row: 2 / 3;
+  justify-self: start;
+  align-self: center; }
+
+.h3 {
+  grid-row: 3 / 4;
+  justify-self: start;
+  align-self: center; }
+
+.p1 {
+  margin-right: 27rem;
+  margin-top: 6rem;
+  font-weight: 600; }
+
+.contato {
+  grid-row: 3 / 4;
+  grid-column: full-start /  full-end;
+  background-color: var(--color-primary-light); }
+  .contato__headings {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .contato__formulario {
+    display: flex;
+    flex-direction: column;
+    animation: formContatoAnimated 1.5s;
+    margin: 6rem auto;
+    padding: 7rem;
+    width: 80rem;
+    background-color: white; }
+    .contato__formulario--btn {
+      margin-top: 3rem;
+      align-self: center;
+      box-shadow: 0 0 0; }
+    .contato__formulario input[type=text],
+    .contato__formulario input[type=email],
+    .contato__formulario input[type=tel],
+    .contato__formulario textarea {
+      border-radius: .1rem;
+      display: block;
+      padding: 1rem 0 1rem 1.5rem;
+      margin-bottom: 2rem;
+      font-family: inherit;
+      outline: none;
+      border: 1.5px solid #646262;
+      transition: all 0.3s linear; }
+    .contato__formulario input[type=text]:hover,
+    .contato__formulario input[type=email]:hover,
+    .contato__formulario input[type=tel]:hover,
+    .contato__formulario textarea:hover {
+      border-color: black; }
+    .contato__formulario input[type=text]:focus,
+    .contato__formulario input[type=email]:focus,
+    .contato__formulario input[type=tel]:focus,
+    .contato__formulario textarea:focus {
+      border: 1.5px solid green; }
+    .contato__formulario input:focus:invalid,
+    .contato__formulario textarea:focus:invalid {
+      border: 1.5px solid red; }
+
+@keyframes navResponsiveAnimation {
+  0% {
+    height: 8vh; }
+  100% {
+    height: 20vh; } }
+
+@keyframes navResponsiveIconAnimation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes formContatoAnimated {
+  0% {
+    opacity: 0;
+    transform: scale(0.6); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes tratamentosDescAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 .services {
   grid-row: 3 / 4;
   grid-column: center-start / center-end;
   display: grid;
   grid-row-gap: 3rem;
-  margin: 6rem 0; }
+  margin: 12rem 0; }
   .services__servicos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -418,8 +677,6 @@ body {
       color: black;
       font-family: var(--font-primary);
       font-weight: 400; }
-    .services__text--pg {
-      font-size: 1.9rem; }
   .services__btn {
     grid-row: 1 / 2;
     grid-column: 2 / 3;

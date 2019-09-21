@@ -64,6 +64,7 @@ html{
         .navbar .nav .nav__item--1, .nav__item--2, .nav__item--3 {
             display: none;
             animation: navResponsiveIconAnimation 1.9s;
+            grid-column: 1 / span 2;
         }
 
         .navbar .nav .nav__item .nav__svg{ width: 3rem;}
@@ -72,10 +73,12 @@ html{
             display: block;
         }
 
+        .navbar__img{ grid-column: 1 / span 2; }
+
         .navbar.responsive .nav{ height: 20vh; 
-            justify-items: start;
             animation: navResponsiveAnimation 1s;
             transition: all 1s;
+            
         }
 
         .navbar.responsive .nav .nav__item--1{
@@ -94,6 +97,14 @@ html{
             grid-column:  5 / 6;
         }
         .navbar.responsive .nav .nav__item { display: block;}
+
+        .tratamentos__description{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+            grid-gap: 3rem;
+        }
+
+        .tratamentos__img{ width: 50rem;}
     }
 
     @media only screen and (max-width: $bp-500){
