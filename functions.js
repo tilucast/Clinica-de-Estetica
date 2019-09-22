@@ -8,9 +8,8 @@ function navbarCollapse(){
 };
 
 
-
 let prevScroll = window.pageYOffset;
-window.onscroll = function (){
+window.onscroll = () => {
     let currentScroll = window.pageYOffset;
     const navbarPosition =  document.querySelector('.navbar');
     
@@ -21,4 +20,15 @@ window.onscroll = function (){
     }
     prevScroll = currentScroll;
 }
+
+
+const popupDisplay = document.querySelector('.popup');
+setTimeout(() => {
+    popupDisplay.style.display = "block";
+}, 1000);
+const popupClose = document.querySelector('.popup__content--close');
+popupClose.addEventListener("click", () =>{
+    popupDisplay.style.display = "none";
+}); 
+
 

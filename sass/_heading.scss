@@ -25,6 +25,7 @@
     background-image: /*linear-gradient(rgba(crimson, 0.5), rgba(rgb(252, 116, 143), 0.5)),*/
     url(../img/wallhaven-731kdv.jpg);
     background-size: cover;
+    background-position: center center;
     text-align: center;
 
     display: grid;
@@ -39,6 +40,10 @@
     &__btn{
         justify-self: center;
         align-self: center;
+
+        &--jegue{
+            color: black;
+        }
     }
 }
 
