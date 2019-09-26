@@ -1,10 +1,12 @@
 function navbarCollapse(){
-    const navbar = document.querySelector('#topNav');
-    if(navbar.className === "navbar"){
+    let navbar = document.querySelector('.navbar');
+    if(navbar.className == "navbar"){
         navbar.className += " responsive";
+        navbar.removeAttribute("id");
     } else {
         navbar.className = "navbar";
-    }
+        navbar.setAttribute("id", "topNav");
+    }   
 };
 
 
@@ -16,7 +18,7 @@ window.onscroll = () => {
     if(prevScroll > currentScroll){
         navbarPosition.style.top = '0';
     }  else{
-        navbarPosition.style.top = '-120px';
+        navbarPosition.style.top = '-148px';
     }
     prevScroll = currentScroll;
 }
@@ -25,8 +27,8 @@ window.onscroll = () => {
 const popupDisplay = document.querySelector('.popup');
 setTimeout(() => {
     popupDisplay.style.display = "block";
-}, 1000);
-const popupClose = document.querySelector('.popup__content--close');
+}, 2000);
+const popupClose = document.querySelector('.close-btn');
 popupClose.addEventListener("click", () =>{
     popupDisplay.style.display = "none";
 }); 

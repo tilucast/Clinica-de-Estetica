@@ -72,3 +72,19 @@
     border-radius: 5rem;
 }
 
+.close-btn{
+    cursor: pointer;
+    font-size: 5rem;
+    color: white;
+}
+
+.close-btn:hover{
+    color: var(--color-primary);
+}
+
+.descontos{
+    color: var(--gray-1);
+    font-size: 5rem;
+    font-weight: 600;
+}
+

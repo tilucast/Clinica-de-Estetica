@@ -56,6 +56,19 @@
   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
   border-radius: 5rem; }
 
+.close-btn {
+  cursor: pointer;
+  font-size: 5rem;
+  color: white; }
+
+.close-btn:hover {
+  color: var(--color-primary); }
+
+.descontos {
+  color: var(--gray-1);
+  font-size: 5rem;
+  font-weight: 600; }
+
 .heading-1 {
   font-size: 8rem;
   font-family: var(--font-heading-2);
@@ -147,6 +160,8 @@ html {
         display: block; }
       html .navbar__img {
         grid-column: 1 / span 2; }
+      html #topNav {
+        animation: navClosingAnimation 1s; }
       html .navbar.responsive .nav {
         height: 20vh;
         animation: navResponsiveAnimation 1s;
@@ -629,6 +644,12 @@ iframe {
   100% {
     height: 20vh; } }
 
+@keyframes navClosingAnimation {
+  0% {
+    height: 20vh; }
+  100% {
+    height: 8vh; } }
+
 @keyframes navResponsiveIconAnimation {
   0% {
     opacity: 0; }
@@ -654,17 +675,33 @@ iframe {
 .popup {
   grid-column: full-start / full-end;
   display: none;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(14, 14, 14, 0.9);
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 1000; }
+  .popup__heading {
+    color: var(--gray-1);
+    font-size: 4rem; }
   .popup__content {
-    margin: 0 auto;
-    width: 60rem;
-    background-color: white; }
+    display: grid;
+    grid-template-columns: 60rem 20rem;
+    align-items: center;
+    justify-items: center;
+    margin: 42rem auto;
+    width: 80rem;
+    height: 40rem;
+    background-image: url(../img/darkimg.jpg);
+    background-position: center center; }
     .popup__content--close {
-      cursor: pointer; }
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      justify-self: end;
+      align-self: start;
+      margin-right: 2rem; }
+    .popup__content--btn {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4; }
 
 .services {
   grid-row: 3 / 4;

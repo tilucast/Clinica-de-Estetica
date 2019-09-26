@@ -72,6 +72,8 @@ html{
 
         .navbar__img{ grid-column: 1 / span 2; }
 
+        #topNav{ animation: navClosingAnimation 1s; }
+
         .navbar.responsive .nav{ height: 20vh; 
             animation: navResponsiveAnimation 1s;
             transition: all 1s;
