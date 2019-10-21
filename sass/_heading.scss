@@ -22,7 +22,7 @@
     grid-row: 2 / 3;
     grid-column: full-start / full-end;
 
-    background-image: /*linear-gradient(rgba(crimson, 0.5), rgba(rgb(252, 116, 143), 0.5)),*/
+    background-image: linear-gradient(rgba(black, 0.2), rgba(black, 0.2)),
     url(../img/wallhaven-731kdv.jpg);
     background-size: cover;
     background-position: center center;
@@ -40,6 +40,7 @@
     &__btn{
         justify-self: center;
         align-self: center;
+        animation: btnAnimation 2s linear infinite;
 
         &--jegue{
             color: black;
@@ -52,7 +53,7 @@
 .header-2{
     @extend %general-headings;
 
-    background-image: linear-gradient(rgba(crimson, .4), rgba(252, 116, 143, .7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
     url(../img/wallhaven-73wpro.jpg);
 
     &__h2{
@@ -63,7 +64,7 @@
 .header-3{
     @extend %general-headings;
 
-    background-image: linear-gradient(rgba(crimson, .7), rgba(252, 116, 143, .7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
     url(../img/depilacao_a_laser.jpg);
 
     &__h2{
@@ -74,7 +75,7 @@
 .header-4{
     @extend %general-headings;
 
-    background-image: linear-gradient(rgba(crimson, .7), rgba(252, 116, 143, .7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
     url(../img/Carboxiterapia-620x330.jpg);
 
     &__h2{
@@ -85,7 +86,7 @@
 .header-5{
     @extend %general-headings;
 
-    background-image: linear-gradient(rgba(crimson, .7), rgba(252, 116, 143, .7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
     url(../img/corrente-russa-620x330.jpg);
 
     &__h2{
@@ -96,7 +97,7 @@
 .header-6{
     @extend %general-headings;
 
-    background-image: linear-gradient(rgba(crimson, .7), rgba(252, 116, 143, .7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
     url(../img/criolipolise.jpeg);
 
     &__h2{
@@ -107,7 +108,7 @@
 .header-7{
     @extend %general-headings;
 
-    background-image: linear-gradient(rgba(crimson, .7), rgba(252, 116, 143, .7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
     url(../img/serv_est_drenagemLinfatica.jpg);
 
     &__h2{
@@ -118,7 +119,7 @@
 .header-8{
     @extend %general-headings;
 
-    background-image: linear-gradient(rgba(crimson, .7), rgba(252, 116, 143, .7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
     url(../img/massagem-express.jpg);
 
     &__h2{
@@ -129,7 +130,7 @@
 .header-9{
     @extend %general-headings;
 
-    background-image: linear-gradient(rgba(crimson, .7), rgba(252, 116, 143, .7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
     url(../img/preenchimento.jpg);
 
     &__h2{
@@ -140,7 +141,7 @@
 .header-10{
     @extend %general-headings;
 
-    background-image: linear-gradient(rgba(crimson, .7), rgba(252, 116, 143, .7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
     url(../img/heccus.jpg);
 
     &__h2{
@@ -151,7 +152,7 @@
 .header-11{
     @extend %general-headings;
 
-    background-image: linear-gradient(rgba(crimson, .7), rgba(252, 116, 143, .7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
     url(../img/microagulhamento.jpg);
 
     &__h2{
@@ -161,7 +162,7 @@
 .header-12{
     @extend %general-headings;
 
-    background-image: linear-gradient(rgba(crimson, .7), rgba(252, 116, 143, .7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
     url(../img/wallhaven-4515o7.jpg);
 
     &__h2{

@@ -233,7 +233,7 @@ body {
 .capa {
   grid-row: 2 / 3;
   grid-column: full-start / full-end;
-  background-image: url(../img/wallhaven-731kdv.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/wallhaven-731kdv.jpg);
   background-size: cover;
   background-position: center center;
   text-align: center;
@@ -245,42 +245,43 @@ body {
     margin-bottom: 2rem; }
   .capa__btn {
     justify-self: center;
-    align-self: center; }
+    align-self: center;
+    animation: btnAnimation 2s linear infinite; }
     .capa__btn--jegue {
       color: black; }
 
 .header-2 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.4), rgba(252, 116, 143, 0.7)), url(../img/wallhaven-73wpro.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/wallhaven-73wpro.jpg); }
 
 .header-3 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/depilacao_a_laser.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/depilacao_a_laser.jpg); }
 
 .header-4 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/Carboxiterapia-620x330.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/Carboxiterapia-620x330.jpg); }
 
 .header-5 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/corrente-russa-620x330.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/corrente-russa-620x330.jpg); }
 
 .header-6 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/criolipolise.jpeg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/criolipolise.jpeg); }
 
 .header-7 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/serv_est_drenagemLinfatica.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/serv_est_drenagemLinfatica.jpg); }
 
 .header-8 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/massagem-express.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/massagem-express.jpg); }
 
 .header-9 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/preenchimento.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/preenchimento.jpg); }
 
 .header-10 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/heccus.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/heccus.jpg); }
 
 .header-11 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/microagulhamento.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/microagulhamento.jpg); }
 
 .header-12 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/wallhaven-4515o7.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/wallhaven-4515o7.jpg); }
 
 .heading {
   padding: 6rem 0;
@@ -519,7 +520,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     grid-gap: 3rem;
-    animation: tratamentosDescAnimation 1.2s; }
+    animation: tratamentosDescAnimation 1s; }
   .tratamentos__description--text {
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
     padding: 2rem 5rem; }
@@ -594,7 +595,7 @@ iframe {
 .contato {
   grid-row: 3 / 4;
   grid-column: full-start /  full-end;
-  background-color: var(--color-primary-light); }
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark)); }
   .contato__headings {
     margin: 5rem 0;
     display: flex;
@@ -603,7 +604,7 @@ iframe {
   .contato__formulario {
     display: flex;
     flex-direction: column;
-    animation: formContatoAnimated 1.5s;
+    animation: formContatoAnimated 0.8s;
     margin: 6rem auto;
     padding: 7rem;
     width: 80rem;
@@ -672,6 +673,20 @@ iframe {
     opacity: 1;
     transform: translateX(0); } }
 
+@keyframes btnAnimation {
+  0% {
+    transform: translateY(0); }
+  25% {
+    transform: translateY(0.75rem); }
+  50% {
+    transform: translateY(2rem); }
+  75% {
+    transform: translateY(-1.25rem); }
+  90% {
+    transform: translateY(-0.25rem); }
+  100% {
+    transform: translateY(0); } }
+
 .popup {
   grid-column: full-start / full-end;
   display: none;
@@ -688,7 +703,7 @@ iframe {
     grid-template-columns: 60rem 20rem;
     align-items: center;
     justify-items: center;
-    margin: 42rem auto;
+    margin: 40vh auto;
     width: 80rem;
     height: 40rem;
     background-image: url(../img/darkimg.jpg);

@@ -1,7 +1,7 @@
 .contato{
     grid-row: 3 / 4;
     grid-column: full-start /  full-end;
-    background-color: var(--color-primary-light);
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
 
 
     &__headings{
@@ -14,7 +14,7 @@
     &__formulario{
         display: flex;
         flex-direction: column;
-        animation: formContatoAnimated 1.5s;
+        animation: formContatoAnimated 0.8s;
 
         margin: 6rem auto;
         padding: 7rem;

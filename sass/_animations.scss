@@ -44,3 +44,29 @@
         transform: translateX(0);
     }
 }
+
+@keyframes btnAnimation{
+    0%{
+        transform: translateY(0);
+    }
+
+    25%{
+        transform: translateY(0.75rem);
+    }
+
+    50%{
+        transform: translateY(2rem);
+    }
+
+    75%{
+        transform: translateY(-1.25rem);
+    }
+
+    90%{
+        transform: translateY(-0.25rem);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}

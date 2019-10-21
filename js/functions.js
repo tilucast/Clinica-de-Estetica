@@ -1,4 +1,5 @@
-function navbarCollapse(){
+let menu = document.querySelector("#menu-event");
+menu.addEventListener("click", ()=>{
     let navbar = document.querySelector('.navbar');
     if(navbar.className == "navbar"){
         navbar.className += " responsive";
@@ -7,7 +8,10 @@ function navbarCollapse(){
         navbar.className = "navbar";
         navbar.setAttribute("id", "topNav");
     }   
-};
+
+});
+
+
 
 
 let prevScroll = window.pageYOffset;
@@ -24,13 +28,5 @@ window.onscroll = () => {
 }
 
 
-const popupDisplay = document.querySelector('.popup');
-setTimeout(() => {
-    popupDisplay.style.display = "block";
-}, 2000);
-const popupClose = document.querySelector('.close-btn');
-popupClose.addEventListener("click", () =>{
-    popupDisplay.style.display = "none";
-}); 
 
 
