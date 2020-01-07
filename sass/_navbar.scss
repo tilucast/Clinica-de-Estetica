@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     background-color: rgb(255, 255, 255);
     position: fixed;
     width: 100%;
@@ -7,33 +7,32 @@
     grid-column: full-start / full-end;
     z-index: 100;
 
-    &__img{
+    &__img {
         width: 80%;
     }
 
 }
 
-.nav{
+.nav {
     list-style: none;
 
     display: grid;
     grid-template-columns: repeat(5, minmax(15rem, 1fr));
-    
+
 
     height: 8vh;
     align-items: center;
 
-    &__item{
-        width:100%;
+    &__item {
+        width: 100%;
         transition: all .4s;
     }
 
-    &__item:hover:not(:last-child){
+    &__item:hover:not(:last-child) {
         background-color: var(--color-primary-dark);
     }
 
-    &__link:link,
-    &__link:visited{
+    &__link {
         text-decoration: none;
         color: var(--gray-darker-3);
         font-size: 1.8rem;
@@ -45,29 +44,30 @@
         transition: all .2s;
     }
 
-    &__link:focus{
-        color: white;
+    &__link:hover {
         fill: white;
+        color: white;
     }
 
-    &__link:hover,
-    &__link:focus{
+    /*&__link:focus {
         color: white;
         fill: white;
-    }
+    }*/
 
-    &__svg{
+    &__svg {
         width: 2rem;
         height: 2rem;
         transform: translateY(.3rem);
         cursor: pointer;
 
-        &--menu{
+        &--menu {
             display: none;
             width: 4rem;
         }
 
-        &--menu:hover{ fill: var(--color-primary-dark);}
+        &--menu:hover {
+            fill: var(--color-primary-dark);
+        }
     }
-    
+
 }

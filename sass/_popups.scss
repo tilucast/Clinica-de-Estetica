@@ -1,4 +1,4 @@
-.popup{
+.popup {
     grid-column: full-start / full-end;
 
     display: none;
@@ -8,24 +8,24 @@
     height: 100%;
     z-index: 1000;
 
-    &__heading{
+    &__heading {
         color: var(--gray-1);
         font-size: 4rem;
     }
 
-    &__content{
+    &__content {
         display: grid;
         grid-template-columns: 60rem 20rem;
         align-items: center;
         justify-items: center;
 
-        margin: 40vh auto;
+        margin: 35vh auto;
         width: 80rem;
         height: 40rem;
         background-image: url(../img/darkimg.jpg);
         background-position: center center;
 
-        &--close{
+        &--close {
             grid-column: 2 / 3;
             grid-row: 1 / 2;
             justify-self: end;
@@ -33,7 +33,7 @@
             margin-right: 2rem;
         }
 
-        &--btn{
+        &--btn {
             grid-column: 1 / 2;
             grid-row: 3 / 4;
         }

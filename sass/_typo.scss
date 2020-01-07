@@ -1,4 +1,4 @@
-.heading-1{
+.heading-1 {
     font-size: 8rem;
     font-family: var(--font-heading-2);
     text-transform: uppercase;
@@ -7,7 +7,7 @@
     line-height: 1;
 }
 
-.heading-2{
+.heading-2 {
     font-size: 4rem;
     letter-spacing: 9px;
     font-family: var(--font-heading);
@@ -16,7 +16,7 @@
     color: var(--gray-1);
 }
 
-.heading-3{
+.heading-3 {
     font-size: 3rem;
     font-family: var(--font-heading);
     text-transform: uppercase;
@@ -24,7 +24,7 @@
     color: var(--color-primary);
 }
 
-.heading-4{
+.heading-4 {
     font-size: 2.5rem;
     line-height: 1;
     text-transform: uppercase;
@@ -32,18 +32,45 @@
     color: var(--gray-1);
 }
 
-.paragraph{
+.paragraph {
     font-size: 1.9rem;
 }
 
-.list{
+.list {
 
     margin: 1rem 0;
 
-    &__item{
+    &__item {
         font-size: 1.7rem;
-        
+
     }
 }
 
-.span-red{ color: var(--color-primary-light);}
+.span-red {
+    color: var(--color-primary-light);
+}
+
+.h1 {
+    grid-row: 1 / 2;
+    justify-self: start;
+    align-self: center;
+}
+
+.h2 {
+    grid-row: 2 / 3;
+    justify-self: start;
+    align-self: center;
+}
+
+.h3 {
+    grid-row: 3 / 4;
+    justify-self: start;
+    align-self: center;
+}
+
+.p1 {
+    margin-right: 27rem;
+    margin-top: 6rem;
+    font-weight: 600;
+
+}

@@ -1,4 +1,4 @@
-%general-headings{
+%general-headings {
     grid-row: 2/3;
     grid-column: full-start / full-end;
 
@@ -8,7 +8,7 @@
     background-size: cover;
 }
 
-%general-headings__h2{
+%general-headings__h2 {
     align-self: center;
     justify-self: center;
 
@@ -16,14 +16,13 @@
     font-weight: 600;
 }
 
-
 //MAIN HEADING OF THE MAIN PAGE
-.capa{
+.capa {
     grid-row: 2 / 3;
     grid-column: full-start / full-end;
 
     background-image: linear-gradient(rgba(black, 0.2), rgba(black, 0.2)),
-    url(../img/wallhaven-731kdv.jpg);
+        url(../img/wallhaven-731kdv.jpg);
     background-size: cover;
     background-position: center center;
     text-align: center;
@@ -31,154 +30,159 @@
     display: grid;
     grid-template-rows: 1fr min-content 1fr;
 
-    &__h1{
+    &__h1 {
         align-self: end;
         font-family: var(--font-primary);
         margin-bottom: 2rem;
     }
 
-    &__btn{
+    &__btn {
         justify-self: center;
         align-self: center;
         animation: btnAnimation 2s linear infinite;
+        font-size: 2.5rem;
 
-        &--jegue{
+        &--jegue {
             color: black;
         }
     }
 }
 
-
 //HEADINGS FOR EACH OF THE TREATMENTS PAGE
-.header-2{
+.header-2 {
     @extend %general-headings;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
-    url(../img/wallhaven-73wpro.jpg);
+        url(../img/wallhaven-73wpro.jpg);
 
-    &__h2{
+    &__h2 {
         @extend %general-headings__h2;
     }
 }
 
-.header-3{
+.header-3 {
     @extend %general-headings;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
-    url(../img/depilacao_a_laser.jpg);
+        url(../img/depilacao_a_laser.jpg);
 
-    &__h2{
+    &__h2 {
         @extend %general-headings__h2;
     }
 }
 
-.header-4{
+.header-4 {
     @extend %general-headings;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
-    url(../img/Carboxiterapia-620x330.jpg);
+        url(../img/Carboxiterapia-620x330.jpg);
 
-    &__h2{
+    &__h2 {
         @extend %general-headings__h2;
     }
 }
 
-.header-5{
+.header-5 {
     @extend %general-headings;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
-    url(../img/corrente-russa-620x330.jpg);
+        url(../img/corrente-russa-620x330.jpg);
 
-    &__h2{
+    &__h2 {
         @extend %general-headings__h2;
     }
 }
 
-.header-6{
+.header-6 {
     @extend %general-headings;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
-    url(../img/criolipolise.jpeg);
+        url(../img/criolipolise.jpeg);
 
-    &__h2{
+    &__h2 {
         @extend %general-headings__h2;
     }
 }
 
-.header-7{
+.header-7 {
     @extend %general-headings;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
-    url(../img/serv_est_drenagemLinfatica.jpg);
+        url(../img/serv_est_drenagemLinfatica.jpg);
 
-    &__h2{
+    &__h2 {
         @extend %general-headings__h2;
     }
 }
 
-.header-8{
+.header-8 {
     @extend %general-headings;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
-    url(../img/massagem-express.jpg);
+        url(../img/massagem-express.jpg);
 
-    &__h2{
+    &__h2 {
         @extend %general-headings__h2;
     }
 }
 
-.header-9{
+.header-9 {
     @extend %general-headings;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
-    url(../img/preenchimento.jpg);
+        url(../img/preenchimento.jpg);
 
-    &__h2{
+    &__h2 {
         @extend %general-headings__h2;
     }
 }
 
-.header-10{
+.header-10 {
     @extend %general-headings;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
-    url(../img/heccus.jpg);
+        url(../img/heccus.jpg);
 
-    &__h2{
+    &__h2 {
         @extend %general-headings__h2;
     }
 }
 
-.header-11{
+.header-11 {
     @extend %general-headings;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
-    url(../img/microagulhamento.jpg);
+        url(../img/microagulhamento.jpg);
 
-    &__h2{
+    &__h2 {
         @extend %general-headings__h2;
     }
 }
-.header-12{
+
+.header-12 {
     @extend %general-headings;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)),
-    url(../img/wallhaven-4515o7.jpg);
+        url(../img/wallhaven-4515o7.jpg);
 
-    &__h2{
+    &__h2 {
         @extend %general-headings__h2;
     }
 }
 
 //HEADING ''TRATAMENTOS'' OF THE MAIN PAGE
-.heading{
+.heading {
     padding: 6rem 0;
-    background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+    background-image: linear-gradient(to right,
+            var(--color-primary-dark),
+            var(--color-primary-light));
     text-align: center;
+
 
     grid-row: 3 / 4;
     grid-column: full-start / full-end;
-    &__p{
+
+    &__p {
         font-size: 1.8rem;
         color: var(--gray-1);
         font-family: var(--font-heading);
@@ -186,4 +190,8 @@
         text-transform: uppercase;
     }
 
+    &-1,
+    &-2 {
+        animation: textAnimation 0.9s linear;
+    }
 }
