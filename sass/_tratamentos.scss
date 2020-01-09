@@ -1,15 +1,31 @@
 .tratamentos{
-    padding: 6rem 0;
-    background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
-    text-align: center;
-
     grid-row: 3 / 4;
-    grid-column: full-start / full-end;
-    &__p{
-        font-size: 1.8rem;
-        color: var(--gray-1);
-        font-family: var(--font-heading);
-        margin-top: 3rem;
-        text-transform: uppercase;
+    grid-column: center-start / center-end;
+
+    margin: 9rem 0;
+    &__description{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        grid-gap: 3rem;
+        animation: tratamentosDescAnimation 1s;
+        
+    }
+
+    &__description--text{
+        box-shadow: .5rem .5rem 1rem rgba(black, .1);
+        padding: 2rem 5rem;
+    }
+
+    &__img{
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        justify-self: center;
+        width: 40rem;
+    }
+
+    &__btn{
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        align-self: end;
     }
 }

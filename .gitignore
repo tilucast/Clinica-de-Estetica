@@ -2,3 +2,18 @@ node_modules
 *.txt
 id_rsa.pub
 icomoon.zip
+<<<<<<< HEAD
+=======
+/css/style.prefix.css
+*.svg
+!img/symbol-defs.svg
+!img/SVG/home.svg
+!img/SVG/lab.svg
+!img/SVG/clipboard.svg
+!img/SVG/menu.svg
+!img/SVG/linkedin.svg
+!img/SVG/github.svg
+!img/SVG/whatsapp.svg
+!img/SVG/phone.svg
+!img/SVG/location.svg
+>>>>>>> testes

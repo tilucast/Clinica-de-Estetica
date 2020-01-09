@@ -1,0 +1,72 @@
+.agendamento {
+    grid-row: 7 / 8;
+
+    grid-column: full-start / full-end;
+
+    display: grid;
+    //grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    grid-auto-rows: min-content;
+    grid-gap: 4rem;
+
+    margin: 12rem 0 9rem 0;
+    padding: 10rem;
+    text-align: center;
+    background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light), rgb(247, 126, 126));
+
+    &__p {
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: white;
+    }
+
+    &__heading {
+        color: white;
+    }
+
+    &__info {
+        grid-column: 1/2;
+
+        display: grid;
+        grid-template-columns: 5rem 45rem;
+        margin-top: 2rem;
+        //justify-content: center;
+
+        &--icons {
+            grid-column: 1 / 2;
+
+            width: 2.3rem;
+            height: 2.3rem;
+            padding: 0.3rem;
+            margin: 1rem 0;
+            fill: white;
+            background-color: var(--color-primary-dark);
+        }
+
+        &--h4 {
+            grid-column: 2 / 3;
+            font-size: 2rem;
+            color: white;
+        }
+    }
+
+    &__ceo {
+        margin: 8rem 0;
+        align-self: center;
+    }
+
+    &__ceo p {
+        color: white;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+
+
+.ceo {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 500px;
+}

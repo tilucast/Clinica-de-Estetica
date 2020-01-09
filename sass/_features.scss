@@ -13,8 +13,6 @@
 
 %imgs{
     background-size: cover;
-    grid-row: 1 / 4;
-    grid-column: 1 / 3;
     transition: all .3s;
     position: relative;
     z-index: 1;
@@ -22,9 +20,8 @@
 
 %imgs-hover{
     opacity: 1;
-    //filter: blur(5px);
     outline: 3px solid white;
-        outline-offset: -30px;
+    outline-offset: -30px;
 }
 
 
@@ -39,33 +36,42 @@
     grid-column: center-start / center-end;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    grid-auto-rows: min-content;
     grid-gap: 4rem;
 
-}
+    &__btn{
+        grid-column: 2 / 3;
+        }
+    }
 
 .feature{
-    //border: 2px solid var(--color-primary-dark);
-
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-
     transition: all .2s;
-
-    &:hover{
-        //transform: scale(1.03);
-    }
 
     &__img{
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        object-position: center;
-        grid-row: 1 / 4;
-        grid-column: 1 / 3;
         border-radius: .5rem;
         overflow: hidden;
+
+        &--caption{
+            font-size: 2.4rem;
+            color: var(--gray-1);
+            font-family: var(--font-primary);
+            margin-bottom: 3rem;
+            text-align: center;
+            opacity: 0;
+            backface-visibility: hidden;
+            transition: all .3s;
+            font-weight: 600;
+            z-index: 10;
+        }
+    
+        &:hover &--caption{
+            transform: translate(0, 10rem);
+            opacity: 1;
+        }
     }
 
     ////// IMAGES STYLING
@@ -80,8 +86,8 @@
     &__img--1::before{ // keep this effect forever !!!!!
         @extend %img-before;
 
-        background-image: linear-gradient(rgba(blueviolet, .9),
-        rgba(blueviolet, .9)) ,url(../img/depilacao_a_laser.jpg);
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/depilacao_a_laser.jpg);
     }
 
     &__img--1:hover::before{
@@ -99,8 +105,8 @@
     &__img--2::before{ // keep this effect forever !!!!!
         @extend %img-before;
 
-        background-image: linear-gradient(rgba(blueviolet, .9),
-        rgba(blueviolet, .9)) ,url(../img/Carboxiterapia-620x330.jpg);
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/Carboxiterapia-620x330.jpg);
     }
 
     &__img--2:hover::before{
@@ -118,8 +124,8 @@
     &__img--3::before{ // keep this effect forever !!!!!
         @extend %img-before;
 
-        background-image: linear-gradient(rgba(blueviolet, .9),
-        rgba(blueviolet, .9)) ,url(../img/corrente-russa-620x330.jpg);
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/corrente-russa-620x330.jpg);
     }
 
     &__img--3:hover::before{
@@ -137,8 +143,8 @@
     &__img--4::before{ // keep this effect forever !!!!!
         @extend %img-before;
 
-        background-image: linear-gradient(rgba(blueviolet, .9),
-        rgba(blueviolet, .9)) ,url(../img/criolipolise.jpeg);
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/criolipolise.jpeg);
     }
 
     &__img--4:hover::before{
@@ -156,8 +162,9 @@
     &__img--5::before{ // keep this effect forever !!!!!
         @extend %img-before;
 
-        background-image: linear-gradient(rgba(blueviolet, .9),
-        rgba(blueviolet, .9)) ,url(../img/serv_est_drenagemLinfatica.jpg);
+        height: 26rem;
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/serv_est_drenagemLinfatica.jpg);
     }
 
     &__img--5:hover::before{
@@ -175,8 +182,8 @@
     &__img--6::before{ // keep this effect forever !!!!!
         @extend %img-before;
 
-        background-image: linear-gradient(rgba(blueviolet, .9),
-        rgba(blueviolet, .9)) ,url(../img/massagem-express.jpg);
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/massagem-express.jpg);
     }
 
     &__img--6:hover::before{
@@ -194,8 +201,8 @@
     &__img--7::before{ // keep this effect forever !!!!!
         @extend %img-before;
 
-        background-image: linear-gradient(rgba(blueviolet, .9),
-        rgba(blueviolet, .9)) ,url(../img/preenchimento.jpg);
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/preenchimento.jpg);
     }
 
     &__img--7:hover::before{
@@ -213,8 +220,8 @@
     &__img--8::before{ // keep this effect forever !!!!!
         @extend %img-before;
 
-        background-image: linear-gradient(rgba(blueviolet, .9),
-        rgba(blueviolet, .9)) ,url(../img/heccus.jpg);
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/heccus.jpg);
     }
 
     &__img--8:hover::before{
@@ -232,8 +239,8 @@
     &__img--9::before{ // keep this effect forever !!!!!
         @extend %img-before;
 
-        background-image: linear-gradient(rgba(blueviolet, .9),
-        rgba(blueviolet, .9)) ,url(../img/microagulhamento.jpg);
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/microagulhamento.jpg);
     }
 
     &__img--9:hover::before{
@@ -241,35 +248,4 @@
 
     }
 
-    //// END OF IMAGES STYLING - START OF CAPTION STYLING
-
-    &__heading{
-        //align-self: end;
-        //grid-column: 1 / 3;
-        //grid-row: 3 / 4;
-        //background-color: var(--color-primary);
-        //text-align: center;
-        //padding: .7rem 0;
-    }
-
-    &__caption{
-        grid-column: 1 / 4;
-        grid-row: 3 / 4;
-
-        font-size: 2.4rem;
-        color: var(--gray-1);
-        font-family: var(--font-primary);
-        margin-bottom: 3rem;
-        text-align: center;
-        opacity: 0;
-        backface-visibility: hidden;
-        transition: all .3s;
-        font-weight: 600;
-        z-index: 10;
-    }
-
-    &:hover &__caption{
-        transform: translate(0, -70px);
-        opacity: 1;
-    }
 }

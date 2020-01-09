@@ -5,13 +5,10 @@
     display: grid;
     grid-row-gap: 3rem;
   
-    margin: 6rem 0;
+    margin: 12rem 0;
 
     &__servicos{
-        
-
         display: grid;
-
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
     }
@@ -42,9 +39,6 @@
             font-weight: 400;
         }
 
-        &--pg{
-            font-size: 1.9rem;
-        }
     }
 
     &__btn{

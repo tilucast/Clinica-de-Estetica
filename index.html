@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet"> 
@@ -15,7 +16,7 @@
 
         <ul class="nav">
                 <img src="img/clinica-estetica-sudoeste-brasilia-df.jpg" alt="Logo clinica" class="navbar__img navbar__section">
-            <li class="nav__item"> 
+            <li class="nav__item nav__item--1"> 
                 <a class="nav__link" href="#">
                     <svg class="nav__svg">
                             <use xlink:href="img/symbol-defs.svg#icon-home"></use>
@@ -23,7 +24,7 @@
                     Home
                 </a> 
             </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item--2">
                 <a class="nav__link" href="tratamentos.html">
                     <svg class="nav__svg">
                             <use xlink:href="img/symbol-defs.svg#icon-lab"></use>
@@ -31,148 +32,166 @@
                     Tratamentos
                 </a> 
             </li>
-            <li class="nav__item">
-                <a class="nav__link" href="#">
-                    <svg class="nav__svg">
-                            <use xlink:href="img/symbol-defs.svg#icon-quill"></use>
-                    </svg>
-                    Blog
-                </a> 
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="#">
+            <li class="nav__item nav__item--3">
+                <a class="nav__link" href="fale-conosco.html">
                     <svg class="nav__svg">
                             <use xlink:href="img/symbol-defs.svg#icon-clipboard"></use>
                     </svg>
-                    Agendamento
+                    Fale Conosco
                 </a> 
+            </li>
+
+            <li class="nav__item nav__item--4">
+                <a class="nav__link" id="menu-event">
+                    <svg class="nav__svg nav__svg--menu">
+                        <use xlink:href="img/symbol-defs.svg#icon-menu"></use>
+                    </svg>
+                </a>
             </li>
         </ul>
     </nav>
 
-    <header class="header">
-        <h1 class="heading-1 header__h1">Perfil Prime Estética</h1>
-        <h2 class="heading-2 header__h2">A melhor Clínica do Sudoeste</h2>
+    <header class="capa">
+        <h1 class="heading-1 capa__h1">Perfil Prime <span class="span-red">Estética</span></h1>
+        <h2 class="heading-2 capa__h2">A melhor Clínica do Sudoeste</h2>
 
-        <button class="header__btn btn">Veja nossos tratamentos</button>
+        <button class="capa__btn btn">Veja nossos tratamentos</button>
     </header>
 
-    <div class="tratamentos">
+    <section class="popup">
+        <div class="popup__content">
+            <h1 class="popup__heading">Estamos Com Promoções</h1>
+            <span class="descontos">20% OFF</span>
+            <a class="btn-link popup__content--btn" href="#">Clique Aqui e Saiba Mais !!!</a>
+            </p>
+            <span class="close-btn popup__content--close">&times;</span>
+        </div>
+    </section>
+
+    <div class="heading">
         <h2 class="heading-2">Tratamentos</h2>
-        <p class="tratamentos__p">Veja nossos tratamentos para sua beleza, saúde e jovialidade</p>
+        <p class="heading__p">Veja nossos tratamentos para sua beleza, saúde e jovialidade</p>
     </div>
 
-    <div class="features">
+    <div data-aos="fade-right" data-aos-duration="1000" class="features">
         <section class="feature">
-            <!--<img src="img/depilacao_a_laser.jpg" alt="Depilacao a laser" class="feature__img feature__img--1"> -->
 
             <div class="feature__img feature__img--1">
 
+                <div class="feature__img--caption">
+                    Depilação à Laser
+                </div>
+
             </div>
 
-            <div class="feature__caption">
-                Depilação à Laser
-            </div>    
-
+                
         </section>
 
         <section class="feature">
-            <!--<img src="img/Carboxiterapia-620x330.jpg" alt="Carboxiterapia" class="feature__img"> -->
             
             <div class="feature__img feature__img--2">
 
-            </div>
+                <div class="feature__img--caption">
+                    Carboxiterapia
+                </div>
 
-            <div class="feature__caption">
-                Carboxiterapia
             </div>
+   
+
         </section>
 
         <section class="feature">
-            <!--<img src="img/corrente-russa-620x330.jpg" alt="Corrente russa" class="feature__img">-->
             
             <div class="feature__img feature__img--3">
 
+                <div class="feature__img--caption">
+                    Corrente Russa
+                </div>
+
             </div>
 
-            <div class="feature__caption">
-                Corrente Russa
-            </div>
+
         </section>
 
         <section class="feature">
-            <!--<img src="img/criolipolise.jpeg" alt="Criolipolise" class="feature__img">-->
             
             <div class="feature__img feature__img--4">
 
+                <div class="feature__img--caption">
+                    Criolipólise
+                </div>
+
             </div>
 
-            <div class="feature__caption">
-                Criolipólise
-            </div>
+
         </section>
 
         <section class="feature">
-            <!--<img src="img/serv_est_drenagemLinfatica.jpg" alt="Drenagem" class="feature__img">-->
             
             <div class="feature__img feature__img--5">
 
+                <div class="feature__img--caption">
+                    Drenagem Linfática
+                </div>
+
             </div>
 
-            <div class="feature__caption">
-                Drenagem Linfática
-            </div>
+
         </section>
 
         <section class="feature">
-            <!--<img src="img/massagem-express.jpg" alt="Massagem" class="feature__img">-->
             
             <div class="feature__img feature__img--6">
 
+                <div class="feature__img--caption">
+                    Massagem
+                </div>
+
             </div>
 
-            <div class="feature__caption">
-                Massagem
-            </div>
+
         </section>
 
         <section class="feature">
-            <!--<img src="img/preenchimento.jpg" alt="Preenchimento Facial" class="feature__img">-->
             
             <div class="feature__img feature__img--7">
 
+                <div class="feature__img--caption">
+                    Preenchimento Facial
+                </div>
+
             </div>
 
-            <div class="feature__caption">
-                Preenchimento Facial
-            </div>
+
         </section>
 
         <section class="feature">
-            <!--<img src="img/heccus.jpg" alt="Heccus turbo" class="feature__img">-->
             
             <div class="feature__img feature__img--8">
 
+                <div class="feature__img--caption">
+                    Heccus Turbo
+                </div>
+
             </div>
 
-            <div class="feature__caption">
-                Heccus Turbo
-            </div>
+
         </section>
 
         <section class="feature">
-            <!--<img src="img/microagulhamento.jpg" alt="Microagulhamento" class="feature__img">-->
             
             <div class="feature__img feature__img--9">
 
+                <div class="feature__img--caption">
+                    Microagulhamento
+                </div>
+
             </div>
 
-            <div class="feature__caption">
-                Microagulhamento
-            </div>
+            
         </section>
 
-        <a href="tratamentos.html" class="btn-link">Confira o restante &rarr;</a>
+        <a href="tratamentos.html" class="btn-link features__btn">Confira o restante &rarr;</a>
 
     </div>
 
@@ -214,10 +233,43 @@
         </figure>
     </div>
 
+    <div class="agendamento">
+
+        <section class="agendamento__reserva">
+            <h3 class="heading-3 agendamento__heading">Agende um Horário</h3>
+            <p class=" agendamento__p">Reserve Sua Consulta</p>
+            <p class="agendamento__p p1">Unidade de Águas Claras</p>
+
+        <div class="agendamento__info">
+            <svg class="agendamento__info--icons">
+                <use xlink:href="img/symbol-defs.svg#icon-whatsapp"></use>
+            </svg>
+            <svg class="agendamento__info--icons">
+                <use xlink:href="img/symbol-defs.svg#icon-phone"></use>
+            </svg>
+            <svg class="agendamento__info--icons">
+                <use xlink:href="img/symbol-defs.svg#icon-location"></use>
+            </svg>
+    
+            <h4 class="agendamento__info--h4  h1"> + 55 61 8135-9920</h4>
+            <h4 class="agendamento__info--h4  h2"> + 55 9 9435-9991</h4>
+            <h4 class="agendamento__info--h4  h3"> Lote 6, Av. Pau Brasil - Águas Claras , Brasília - DF</h4>
+
+        </div> 
+          
+        </section>
+            
+        <section class="agendamento__ceo">
+            <img src="img/wallhaven-4515o7.jpg" alt="ceo empresa" class="ceo">
+            <p>"lorem ipsum ipsum pisum 1874.756!"</p>
+        </section>
+
+    </div>
+
     <div class="map">
         <h2 class="heading-2 map__heading-2">Venha conhecer nossa unidade</h2>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.3329782058445!2d-48.02949158465929!3d-15.839087189023454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a326eeb90904b%3A0x5d725db83026cf88!2sEdif%C3%ADcio+E-business!5e0!3m2!1sen!2sbr!4v1559514966471!5m2!1sen!2sbr" width="800" height="650" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.3329782058445!2d-48.02949158465929!3d-15.839087189023454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a326eeb90904b%3A0x5d725db83026cf88!2sEdif%C3%ADcio+E-business!5e0!3m2!1sen!2sbr!4v1559514966471!5m2!1sen!2sbr" width="700" height="650" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 
     <footer class="footer">
@@ -243,5 +295,12 @@
         </div>
         
     </footer>  
+
+    <script src="js/functions.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

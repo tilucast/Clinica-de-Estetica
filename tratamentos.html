@@ -1,193 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="#" type="image/png">
     <title>Tratamentos</title>
 </head>
+
 <body class="container-2">
     <nav class="navbar">
 
         <ul class="nav">
-                <img src="img/clinica-estetica-sudoeste-brasilia-df.jpg" alt="Logo clinica" class="navbar__img navbar__section">
-            <li class="nav__item"> 
+            <img src="img/clinica-estetica-sudoeste-brasilia-df.jpg" alt="Logo clinica"
+                class="navbar__img navbar__section">
+            <li class="nav__item nav__item--1">
                 <a class="nav__link" href="index.html">
                     <svg class="nav__svg">
-                            <use xlink:href="img/symbol-defs.svg#icon-home"></use>
+                        <use xlink:href="img/symbol-defs.svg#icon-home"></use>
                     </svg>
                     Home
-                </a> 
+                </a>
             </li>
-            <li class="nav__item">
-                <a class="nav__link" href="#">
-                    <svg class="nav__svg">
-                            <use xlink:href="img/symbol-defs.svg#icon-lab"></use>
-                    </svg>
-                    Tratamentos
-                </a> 
-            </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item--2">
                 <a class="nav__link" href="tratamentos.html">
                     <svg class="nav__svg">
-                            <use xlink:href="img/symbol-defs.svg#icon-quill"></use>
+                        <use xlink:href="img/symbol-defs.svg#icon-lab"></use>
                     </svg>
-                    Blog
-                </a> 
+                    Tratamentos
+                </a>
             </li>
-            <li class="nav__item">
-                <a class="nav__link" href="#">
+            <li class="nav__item nav__item--3">
+                <a class="nav__link" href="fale-conosco.html">
                     <svg class="nav__svg">
-                            <use xlink:href="img/symbol-defs.svg#icon-clipboard"></use>
+                        <use xlink:href="img/symbol-defs.svg#icon-clipboard"></use>
                     </svg>
-                    Agendamento
-                </a> 
+                    Fale Conosco
+                </a>
+            </li>
+
+            <li class="nav__item nav__item--4">
+                <a class="nav__link" id="menu-event">
+                    <svg class="nav__svg nav__svg--menu">
+                        <use xlink:href="img/symbol-defs.svg#icon-menu"></use>
+                    </svg>
+                </a>
             </li>
         </ul>
     </nav>
 
     <header class="header-2">
-        <h2 class="heading-2 header-2__h2">Tratamentos Especializados</h2>
+        <h2 class="heading-2 header-2__h2">Tratamentos</h2>
     </header>
 
     <section class="services">
-        <div class="services__servicos">
+        <div data-aos="fade-right" class="services__servicos">
             <img src="img/depilacao_a_laser.jpg" alt="depilacao a laser" class="services__img">
 
             <div class="services__text">
                 <h3 class="heading-3 services__text--heading">Depilação a Laser</h3>
-                <p class="services__text--pg">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus unde blanditiis! Voluptas,
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus
+                    unde blanditiis! Voluptas,
                     laudantium facilis placeat magni provident est?
-                    Soluta provident nulla, vitae saepe in nam.
+                    Soluta provident nulla.
                 </p>
             </div>
-            <a href="tratamentos.html" class="btn-link services__btn">Saiba Mais</a>
+            <a href="depilacao-a-laser.html" class="btn-link services__btn">Saiba Mais</a>
         </div>
 
-        <div class="services__servicos">
+        <div data-aos="fade-right" class="services__servicos">
             <img src="img/Carboxiterapia-620x330.jpg" alt="Carboxiterapia" class="services__img">
 
             <div class="services__text">
                 <h3 class="heading-3 services__text--heading">Carboxiterapia</h3>
-                <p class="services__text--pg">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus unde blanditiis! Voluptas,
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus
+                    unde blanditiis! Voluptas,
                     laudantium facilis placeat magni provident est?
-                    Soluta provident nulla, vitae saepe in nam.
+                    Soluta provident nulla.
                 </p>
             </div>
-            <a href="tratamentos.html" class="btn-link services__btn">Saiba Mais</a>
+            <a href="carboxiterapia.html" class="btn-link services__btn">Saiba Mais</a>
         </div>
-        
-        <div class="services__servicos">
+
+        <div data-aos="fade-right" class="services__servicos">
             <img src="img/corrente-russa-620x330.jpg" alt="Corrente russa" class="services__img">
 
             <div class="services__text">
                 <h3 class="heading-3 services__text--heading">Corrente Russa</h3>
-                <p class="services__text--pg">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus unde blanditiis! Voluptas,
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus
+                    unde blanditiis! Voluptas,
                     laudantium facilis placeat magni provident est?
-                    Soluta provident nulla, vitae saepe in nam.
+                    Soluta provident nulla.
                 </p>
             </div>
-            <a href="tratamentos.html" class="btn-link services__btn">Saiba Mais</a>
+            <a href="corrente-russa.html" class="btn-link services__btn">Saiba Mais</a>
         </div>
 
-        <div class="services__servicos">
+        <div data-aos="fade-right" class="services__servicos">
             <img src="img/criolipolise.jpeg" alt="Criolipolise" class="services__img">
 
             <div class="services__text">
                 <h3 class="heading-3 services__text--heading">criolipolise</h3>
-                <p class="services__text--pg">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus unde blanditiis! Voluptas,
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus
+                    unde blanditiis! Voluptas,
                     laudantium facilis placeat magni provident est?
-                    Soluta provident nulla, vitae saepe in nam.
+                    Soluta provident nulla.
                 </p>
             </div>
-            <a href="tratamentos.html" class="btn-link services__btn">Saiba Mais</a>
+            <a href="criolipolise.html" class="btn-link services__btn">Saiba Mais</a>
         </div>
 
-        <div class="services__servicos">
+        <div data-aos="fade-right" class="services__servicos">
             <img src="img/serv_est_drenagemLinfatica.jpg" alt="Drenagem linfatica" class="services__img">
 
             <div class="services__text">
                 <h3 class="heading-3 services__text--heading">Drenagem Linfática</h3>
-                <p class="services__text--pg">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus unde blanditiis! Voluptas,
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus
+                    unde blanditiis! Voluptas,
                     laudantium facilis placeat magni provident est?
-                    Soluta provident nulla, vitae saepe in nam.
+                    Soluta provident nulla.
                 </p>
             </div>
-            <a href="tratamentos.html" class="btn-link services__btn">Saiba Mais</a>
+            <a href="drenagem-linfatica.html" class="btn-link services__btn">Saiba Mais</a>
         </div>
 
-        <div class="services__servicos">
+        <div data-aos="fade-right" class="services__servicos">
             <img src="img/massagem-express.jpg" alt="massagem" class="services__img">
 
             <div class="services__text">
                 <h3 class="heading-3 services__text--heading">Massagem</h3>
-                <p class="services__text--pg">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus unde blanditiis! Voluptas,
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus
+                    unde blanditiis! Voluptas,
                     laudantium facilis placeat magni provident est?
-                    Soluta provident nulla, vitae saepe in nam.
+                    Soluta provident nulla.
                 </p>
             </div>
-            <a href="tratamentos.html" class="btn-link services__btn">Saiba Mais</a>
+            <a href="massagem.html" class="btn-link services__btn">Saiba Mais</a>
         </div>
 
-        <div class="services__servicos">
+        <div data-aos="fade-right" class="services__servicos">
             <img src="img/preenchimento.jpg" alt="preenchimento facial" class="services__img">
 
             <div class="services__text">
                 <h3 class="heading-3 services__text--heading">Preenchimento Facial</h3>
-                <p class="services__text--pg">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus unde blanditiis! Voluptas,
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus
+                    unde blanditiis! Voluptas,
                     laudantium facilis placeat magni provident est?
-                    Soluta provident nulla, vitae saepe in nam.
+                    Soluta provident nulla.
                 </p>
             </div>
-            <a href="tratamentos.html" class="btn-link services__btn">Saiba Mais</a>
+            <a href="preenchimento-facial.html" class="btn-link services__btn">Saiba Mais</a>
         </div>
 
-        <div class="services__servicos">
+        <div data-aos="fade-right" class="services__servicos">
             <img src="img/heccus.jpg" alt="heccus turbo" class="services__img">
 
             <div class="services__text">
                 <h3 class="heading-3 services__text--heading">Heccus Turbo</h3>
-                <p class="services__text--pg">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus unde blanditiis! Voluptas,
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus
+                    unde blanditiis! Voluptas,
                     laudantium facilis placeat magni provident est?
-                    Soluta provident nulla, vitae saepe in nam.
+                    Soluta provident nulla.
                 </p>
             </div>
-            <a href="tratamentos.html" class="btn-link services__btn">Saiba Mais</a>
+            <a href="heccus-turbo.html" class="btn-link services__btn">Saiba Mais</a>
         </div>
 
-        <div class="services__servicos">
+        <div data-aos="fade-right" class="services__servicos">
             <img src="img/microagulhamento.jpg" alt="microagulhamento" class="services__img">
 
             <div class="services__text">
                 <h3 class="heading-3 services__text--heading">Microagulhamento</h3>
-                <p class="services__text--pg">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus unde blanditiis! Voluptas,
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa odit odio maiores voluptatibus
+                    unde blanditiis! Voluptas,
                     laudantium facilis placeat magni provident est?
+<<<<<<< HEAD
                     Soluta provident nulla, vitae saepe.
+=======
+                    Soluta provident nulla.
+>>>>>>> testes
                 </p>
             </div>
-            <a href="tratamentos.html" class="btn-link services__btn">Saiba Mais</a>
+            <a href="microagulhamento.html" class="btn-link services__btn">Saiba Mais</a>
         </div>
     </section>
 
     <footer class="footer">
-        
+
         <div class="footer__copyright">
-            <p> &copy; Lucas Tavares</p> 
+            <p> &copy; Lucas Tavares</p>
         </div>
-        
+
 
         <div class="footer__links">
             <a href="https://www.linkedin.com/in/lucas-tavares-freire-matos-6bb768157/" target="_blank">
@@ -195,15 +212,26 @@
                     <use xlink:href="img/symbol-defs.svg#icon-linkedin"></use>
                 </svg>
             </a>
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> testes
             <a href="https://github.com/tilucast" target="_blank">
                 <svg>
                     <use xlink:href="img/symbol-defs.svg#icon-github"></use>
                 </svg>
             </a>
-            
+
         </div>
-        
-    </footer>  
+
+    </footer>
+
+    <script src="js/functions.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>

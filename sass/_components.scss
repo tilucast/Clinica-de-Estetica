@@ -9,7 +9,7 @@
     transition: all .2s;
     cursor: pointer;
 
-    box-shadow: 0rem 2rem 3.5rem rgba(black, .5);
+    box-shadow: 0rem 1rem 2rem rgba(black, .5);
 
     &:hover{
         background-color: var(--color-primary-light);
@@ -21,13 +21,11 @@
     &:focus{
         transform: scale(1);
 
-        box-shadow: 0rem 2rem 3.5rem rgba(black, .5);
+        box-shadow: 0rem 1rem 2rem rgba(black, .5);
     }
 }
 
 .btn-link{
-    grid-column: 2 / 3;
-
     position: relative;
     text-decoration: none;
     font-size: 2rem;
@@ -36,12 +34,10 @@
     background-image: linear-gradient(to right, var(--color-primary-dark),
     var(--color-primary-light));
     padding: 1.1rem 3rem;
-    margin-bottom: 3rem;
     border-radius: 5rem;
     display: inline-block;
     justify-self: center;
     align-self: center;
-    box-shadow: 0rem 1.3rem 1.3rem rgba(black, .2);
     background-size: cover;
     z-index: 0;
     transition: all .5s;
@@ -74,5 +70,21 @@
     transform: scale(1.04);
     box-shadow: 0rem .5rem 1rem rgba(black, .2);
     border-radius: 5rem;
+}
+
+.close-btn{
+    cursor: pointer;
+    font-size: 5rem;
+    color: white;
+}
+
+.close-btn:hover{
+    color: var(--color-primary);
+}
+
+.descontos{
+    color: var(--gray-1);
+    font-size: 5rem;
+    font-weight: 600;
 }
 

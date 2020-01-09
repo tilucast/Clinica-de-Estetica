@@ -1,0 +1,65 @@
+.contato{
+    grid-row: 3 / 4;
+    grid-column: full-start /  full-end;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+
+
+    &__headings{
+        margin: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__formulario{
+        display: flex;
+        flex-direction: column;
+        animation: formContatoAnimated 0.8s;
+
+        margin: 6rem auto;
+        padding: 7rem;
+        width: 80rem;
+        background-color: white;
+
+        &--btn{
+            margin-top: 3rem;
+            align-self: center;
+            box-shadow: 0 0 0;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=tel],
+        textarea{
+            border-radius: .1rem;
+            display: block;
+            padding: 1rem 0 1rem 1.5rem;
+            margin-bottom: 2rem;
+            font-family: inherit;
+            outline: none;
+            border: 1.5px solid rgb(100, 98, 98);
+            transition: all 0.3s linear;
+        }
+
+        input[type=text]:hover,
+        input[type=email]:hover,
+        input[type=tel]:hover,
+        textarea:hover{
+            border-color: black;
+            
+        }
+
+        input[type=text]:focus,
+        input[type=email]:focus,
+        input[type=tel]:focus,
+        textarea:focus{
+            border: 1.5px solid green;
+        }
+
+        input:focus:invalid,
+        textarea:focus:invalid{
+            border: 1.5px solid red;
+        }
+
+    }
+}
