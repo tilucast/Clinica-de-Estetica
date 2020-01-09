@@ -56,6 +56,19 @@
   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
   border-radius: 5rem; }
 
+.close-btn {
+  cursor: pointer;
+  font-size: 5rem;
+  color: white; }
+
+.close-btn:hover {
+  color: var(--color-primary); }
+
+.descontos {
+  color: var(--gray-1);
+  font-size: 5rem;
+  font-weight: 600; }
+
 .heading-1 {
   font-size: 8rem;
   font-family: var(--font-heading-2);
@@ -97,6 +110,26 @@
 .span-red {
   color: var(--color-primary-light); }
 
+.h1 {
+  grid-row: 1 / 2;
+  justify-self: start;
+  align-self: center; }
+
+.h2 {
+  grid-row: 2 / 3;
+  justify-self: start;
+  align-self: center; }
+
+.h3 {
+  grid-row: 3 / 4;
+  justify-self: start;
+  align-self: center; }
+
+.p1 {
+  margin-right: 27rem;
+  margin-top: 6rem;
+  font-weight: 600; }
+
 :root {
   --color-primary-light: #ac114a;
   --color-primary: #750b32;
@@ -133,13 +166,13 @@ html {
     html {
       font-size: 41%; }
       html .features__btn {
-        grid-column: auto; }
-      html .capa {
-        background-size: 100% 100%; } }
+        grid-column: auto; } }
   @media only screen and (max-width: 38.75em) {
     html {
       font-size: 36%; }
-      html .navbar .nav .nav__item--1, html .nav__item--2, html .nav__item--3 {
+      html .navbar .nav .nav__item--1,
+      html .nav__item--2,
+      html .nav__item--3 {
         display: none;
         animation: navResponsiveIconAnimation 1.9s;
         grid-column: 1 / span 2; }
@@ -149,6 +182,8 @@ html {
         display: block; }
       html .navbar__img {
         grid-column: 1 / span 2; }
+      html #topNav {
+        animation: navClosingAnimation 1s; }
       html .navbar.responsive .nav {
         height: 20vh;
         animation: navResponsiveAnimation 1s;
@@ -176,7 +211,9 @@ html {
         grid-template-rows: min-content 29vh; } }
   @media only screen and (max-width: 28.125em) {
     html {
-      font-size: 27%; } }
+      font-size: 27%; }
+      html .capa__btn {
+        font-size: 3rem; } }
   @media only screen and (max-width: 25em) {
     html {
       font-size: 23%; }
@@ -220,8 +257,9 @@ body {
 .capa {
   grid-row: 2 / 3;
   grid-column: full-start / full-end;
-  background-image: url(../img/wallhaven-731kdv.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/wallhaven-731kdv.jpg);
   background-size: cover;
+  background-position: center center;
   text-align: center;
   display: grid;
   grid-template-rows: 1fr min-content 1fr; }
@@ -231,40 +269,44 @@ body {
     margin-bottom: 2rem; }
   .capa__btn {
     justify-self: center;
-    align-self: center; }
+    align-self: center;
+    animation: btnAnimation 2s linear infinite;
+    font-size: 2.5rem; }
+    .capa__btn--jegue {
+      color: black; }
 
 .header-2 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.4), rgba(252, 116, 143, 0.7)), url(../img/wallhaven-73wpro.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/wallhaven-73wpro.jpg); }
 
 .header-3 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/depilacao_a_laser.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/depilacao_a_laser.jpg); }
 
 .header-4 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/Carboxiterapia-620x330.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/Carboxiterapia-620x330.jpg); }
 
 .header-5 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/corrente-russa-620x330.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/corrente-russa-620x330.jpg); }
 
 .header-6 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/criolipolise.jpeg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/criolipolise.jpeg); }
 
 .header-7 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/serv_est_drenagemLinfatica.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/serv_est_drenagemLinfatica.jpg); }
 
 .header-8 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/massagem-express.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/massagem-express.jpg); }
 
 .header-9 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/preenchimento.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/preenchimento.jpg); }
 
 .header-10 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/heccus.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/heccus.jpg); }
 
 .header-11 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/microagulhamento.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/microagulhamento.jpg); }
 
 .header-12 {
-  background-image: linear-gradient(rgba(220, 20, 60, 0.7), rgba(252, 116, 143, 0.7)), url(../img/wallhaven-4515o7.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.267)), url(../img/wallhaven-4515o7.jpg); }
 
 .heading {
   padding: 6rem 0;
@@ -278,6 +320,8 @@ body {
     font-family: var(--font-heading);
     margin-top: 3rem;
     text-transform: uppercase; }
+  .heading-1, .heading-2 {
+    animation: textAnimation 0.9s linear; }
 
 .navbar {
   background-color: white;
@@ -294,13 +338,17 @@ body {
   display: grid;
   grid-template-columns: repeat(5, minmax(15rem, 1fr));
   height: 8vh;
-  align-items: center; }
+  align-items: center;
+  /*&__link:focus {
+        color: white;
+        fill: white;
+    }*/ }
   .nav__item {
     width: 100%;
     transition: all .4s; }
   .nav__item:hover:not(:last-child) {
     background-color: var(--color-primary-dark); }
-  .nav__link:link, .nav__link:visited {
+  .nav__link {
     text-decoration: none;
     color: var(--gray-darker-3);
     font-size: 1.8rem;
@@ -310,12 +358,9 @@ body {
     display: block;
     padding: 1rem;
     transition: all .2s; }
-  .nav__link:focus {
-    color: white;
-    fill: white; }
-  .nav__link:hover, .nav__link:focus {
-    color: white;
-    fill: white; }
+  .nav__link:hover {
+    fill: white;
+    color: white; }
   .nav__svg {
     width: 2rem;
     height: 2rem;
@@ -503,7 +548,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     grid-gap: 3rem;
-    animation: tratamentosDescAnimation 1.2s; }
+    animation: tratamentosDescAnimation 1s; }
   .tratamentos__description--text {
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
     padding: 2rem 5rem; }
@@ -532,17 +577,26 @@ iframe {
 
 .agendamento {
   grid-row: 7 / 8;
-  grid-column: center-start / center-end;
-  margin-top: 9rem;
-  text-align: center; }
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-auto-rows: min-content;
+  grid-gap: 4rem;
+  margin: 12rem 0 9rem 0;
+  padding: 10rem;
+  text-align: center;
+  background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light), #f77e7e); }
   .agendamento__p {
     text-transform: uppercase;
-    font-size: 2rem; }
+    font-size: 2rem;
+    color: white; }
+  .agendamento__heading {
+    color: white; }
   .agendamento__info {
+    grid-column: 1/2;
     display: grid;
     grid-template-columns: 5rem 45rem;
-    margin-top: 2rem;
-    justify-content: center; }
+    margin-top: 2rem; }
     .agendamento__info--icons {
       grid-column: 1 / 2;
       width: 2.3rem;
@@ -553,32 +607,26 @@ iframe {
       background-color: var(--color-primary-dark); }
     .agendamento__info--h4 {
       grid-column: 2 / 3;
-      font-size: 2rem; }
+      font-size: 2rem;
+      color: white; }
+  .agendamento__ceo {
+    margin: 8rem 0;
+    align-self: center; }
+  .agendamento__ceo p {
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600; }
 
-.h1 {
-  grid-row: 1 / 2;
-  justify-self: start;
-  align-self: center; }
-
-.h2 {
-  grid-row: 2 / 3;
-  justify-self: start;
-  align-self: center; }
-
-.h3 {
-  grid-row: 3 / 4;
-  justify-self: start;
-  align-self: center; }
-
-.p1 {
-  margin-right: 27rem;
-  margin-top: 6rem;
-  font-weight: 600; }
+.ceo {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 500px; }
 
 .contato {
   grid-row: 3 / 4;
   grid-column: full-start /  full-end;
-  background-color: var(--color-primary-light); }
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark)); }
   .contato__headings {
     margin: 5rem 0;
     display: flex;
@@ -587,7 +635,7 @@ iframe {
   .contato__formulario {
     display: flex;
     flex-direction: column;
-    animation: formContatoAnimated 1.5s;
+    animation: formContatoAnimated 0.8s;
     margin: 6rem auto;
     padding: 7rem;
     width: 80rem;
@@ -628,6 +676,12 @@ iframe {
   100% {
     height: 20vh; } }
 
+@keyframes navClosingAnimation {
+  0% {
+    height: 20vh; }
+  100% {
+    height: 8vh; } }
+
 @keyframes navResponsiveIconAnimation {
   0% {
     opacity: 0; }
@@ -649,6 +703,62 @@ iframe {
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
+@keyframes btnAnimation {
+  0% {
+    transform: translateY(0); }
+  25% {
+    transform: translateY(0.75rem); }
+  50% {
+    transform: translateY(2rem); } }
+
+@keyframes textAnimation {
+  0% {
+    transform: translateX(-20rem);
+    opacity: 0; }
+  50% {
+    transform: translateX(-10rem);
+    opacity: 0.3; }
+  75% {
+    transform: translateX(-5rem);
+    opacity: 0.5; }
+  90% {
+    transform: translateX(4rem);
+    opacity: 0.8; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+.popup {
+  grid-column: full-start / full-end;
+  display: none;
+  background-color: rgba(14, 14, 14, 0.9);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; }
+  .popup__heading {
+    color: var(--gray-1);
+    font-size: 4rem; }
+  .popup__content {
+    display: grid;
+    grid-template-columns: 60rem 20rem;
+    align-items: center;
+    justify-items: center;
+    margin: 35vh auto;
+    width: 80rem;
+    height: 40rem;
+    background-image: url(../img/darkimg.jpg);
+    background-position: center center; }
+    .popup__content--close {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      justify-self: end;
+      align-self: start;
+      margin-right: 2rem; }
+    .popup__content--btn {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4; }
 
 .services {
   grid-row: 3 / 4;
