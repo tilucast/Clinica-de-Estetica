@@ -2,8 +2,6 @@ node_modules
 *.txt
 id_rsa.pub
 icomoon.zip
-<<<<<<< HEAD
-=======
 /css/style.prefix.css
 *.svg
 !img/symbol-defs.svg
@@ -16,4 +14,3 @@ icomoon.zip
 !img/SVG/whatsapp.svg
 !img/SVG/phone.svg
 !img/SVG/location.svg
->>>>>>> testes
