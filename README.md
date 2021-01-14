@@ -17,3 +17,5 @@ Também configurei um prefix , para adicionar os webkits automaticamente, olhand
 Vale a pena ressaltar também que usei quase que inteiramente CSS Grid na construção do layout. Além de preferir Grid a Flex, usei Grid pois estava treinando a syntax.
 
 =============================================================
+
+Check a live version of this website on: https://tilucast.github.io/
